@@ -1,4 +1,4 @@
-import dataArr from "./EnglishName.js";
+/* import dataArr from "./EnglishName.js";
 (function ($) {
 
     const weatherApi = (area) => {
@@ -72,4 +72,4 @@ import dataArr from "./EnglishName.js";
         return false
     })
     weatherApi('Seoul,KR')
-})(jQuery);
+})(jQuery); */

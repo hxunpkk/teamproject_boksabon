@@ -1,8 +1,8 @@
 (function ($) {
-        setTimeout(function () {
-            $(".loader").fadeOut(500);
-        }, 2000);
-    
+    setTimeout(function () {
+        $(".loader").fadeOut(500);
+    }, 2000);
+
     // 모달창의 닫기 버튼 클릭하면 모달창 닫게 하기
     $('body').on('click', '.button', function () {
         $('.modal1').css('z-index', '-100')

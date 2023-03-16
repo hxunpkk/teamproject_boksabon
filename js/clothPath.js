@@ -36,7 +36,7 @@ import dataArr from "./EnglishName.js";
 
                 // 현재온도
                 var $Temp = Math.floor(resp.main.temp);
-                // console.log($Temp)
+                console.log($Temp)
 
                 // 한글 영어로 변환 기능
                 let ddArrctBc = dataArr.filter((value) => {
@@ -56,31 +56,24 @@ import dataArr from "./EnglishName.js";
 
 
     $('.Modal_page ul li .sect1').on('click', function () {
-        $('.modal1').css('z-index', '100')
-        $('.modal2').css('z-index', '-100')
-        $('.modal3').css('z-index', '-100')
-        $('.modal4').css('z-index', '-100')
         $('.oneModal').css('z-index', '100')
         $('.twoModal').css('z-index', '-100')
         $('.threeModal').css('z-index', '-100')
         $('.fourModal').css('z-index', '-100')
-
-
-/*         if (weathersuchi == 'Clear') {
+        $('.modal1').css('z-index', '100')
+        $('.modal2').css('z-index', '-100')
+        $('.modal3').css('z-index', '-100')
+        $('.modal4').css('z-index', '-100')
+        /* if (weathersuchi == 'Clear') {
             $('.oneModal').prepend(`<iframe src="/codyPage.html" style="width:100%; height:100%"></iframe>`)
             console.log(11)
         } else if (weathersuchi == 'Clouds' || weathersuchi == 'Rain') {
             $('.oneModal').prepend(`<iframe src="/codyPage2.html" style="width:100%; height:100%"></iframe>`)
 
-        }else{
-            $('.oneModal').prepend(`<iframe src="/codyPage.html" style="width:100%; height:100%"></iframe>`)
         } */
         return false;
 
     })
-/*     $('.button').on('click', function(){
-        $('.modal').css('z-index', '-100')
-    }) */
 
     // ajax에서 보낸 값(한글)을 영어로 바꿔주는 폼
     $('form').on('submit', function () {

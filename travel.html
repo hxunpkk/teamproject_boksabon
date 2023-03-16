@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행지 추천</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/travel.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+
+    
+</head>
+<body>
+    <!-- 
+        봄 3월~5월                 3월20일~4월10일 벚꽃
+        여름 6월~8월 산 바다 계곡
+        가을 9월~11월 단풍
+        겨울 12월~2월 설경
+    -->
+
+    <section id="section">
+            <div id="map">
+                <button type="button" id="seoul">서울 근교</button>
+                <button type="button" id="busan">부산 근교</button>
+                <button type="button" id="gangwon">강원도</button>
+                <button type="button" id="daejeon">대전 근교</button>
+                <button type="button" id="gwangju">광주 근교</button>
+                <button type="button" id="jeju">제주도</button>
+            </div>
+            <div id="contBox">
+                <h2 class="title">계절별 여행지 추천</h2>
+                <div class="imgBox">
+                    <!-- <div id="arrow"></div> -->
+                    <div class="img img1">
+                        <p class="spring seoul">서울 남산</p>
+                        <p class="spring busan">부산 온천천</p>
+                        <p class="spring gangwon">강원도 강릉 경포대</p>
+                        <p class="spring daejeon">대전 오월드</p>
+                        <p class="spring gwangju">광주 국립 박물관</p>
+                        <p class="spring jeju">제주 휴애리 자연생활공원</p>
+
+                        <p class="summer seoul"></p>
+                        <p class="summer busan">부산 해운대</p>
+                        <p class="summer gangwon"></p>
+                        <p class="summer daejeon"></p>
+                        <p class="summer gwangju"></p>
+                        <p class="summer jeju"></p>
+
+                        <p class="fall seoul"></p>
+                        <p class="fall busan"></p>
+                        <p class="fall gangwon"></p>
+                        <p class="fall daejeon"></p>
+                        <p class="fall gwangju"></p>
+                        <p class="fall jeju"></p>
+
+                        <p class="winter seoul"></p>
+                        <p class="winter busan"></p>
+                        <p class="winter gangwon"></p>
+                        <p class="winter daejeon"></p>
+                        <p class="winter gwangju"></p>
+                        <p class="winter jeju"></p>
+                    </div>
+                    <div class="img img2">
+                        <p class="spring seoul">서울 석촌호수</p>
+                        <p class="spring busan">부산 을숙도 생태공원</p>
+                        <p class="spring gangwon">강원도 반곡역</p>
+                        <p class="spring daejeon">세종 중앙 공원</p>
+                        <p class="spring gwangju">나주 빛가람 호수공원</p>
+                        <p class="spring jeju">제주 휴애리 동백정원</p>
+
+                        <p class="summer seoul"></p>
+                        <p class="summer busan"></p>
+                        <p class="summer gangwon"></p>
+                        <p class="summer daejeon"></p>
+                        <p class="summer gwangju"></p>
+                        <p class="summer jeju"></p>
+                        
+                        <p class="fall seoul"></p>
+                        <p class="fall busan"></p>
+                        <p class="fall gangwon"></p>
+                        <p class="fall daejeon"></p>
+                        <p class="fall gwangju"></p>
+                        <p class="fall jeju"></p>
+
+                        <p class="winter seoul"></p>
+                        <p class="winter busan"></p>
+                        <p class="winter gangwon"></p>
+                        <p class="winter daejeon"></p>
+                        <p class="winter gwangju"></p>
+                        <p class="winter jeju"></p>
+                    </div>
+                    <div class="img img3">
+                        <p class="spring seoul">서울 경희대학교</p>
+                        <p class="spring busan">포항 영일대 호수 공원</p>
+                        <p class="spring gangwon">강원도 삼척 맹방</p>
+                        <p class="spring daejeon">공주 한옥 마을</p>
+                        <p class="spring gwangju">광주 어린이 공원</p>
+                        <p class="spring jeju">제주 산방산 유채꽃밭</p>
+
+                        <p class="summer seoul"></p>
+                        <p class="summer busan"></p>
+                        <p class="summer gangwon"></p>
+                        <p class="summer daejeon"></p>
+                        <p class="summer gwangju"></p>
+                        <p class="summer jeju"></p>
+
+                        <p class="fall seoul"></p>
+                        <p class="fall busan"></p>
+                        <p class="fall gangwon"></p>
+                        <p class="fall daejeon"></p>
+                        <p class="fall gwangju"></p>
+                        <p class="fall jeju"></p>
+
+                        <p class="winter seoul"></p>
+                        <p class="winter busan"></p>
+                        <p class="winter gangwon"></p>
+                        <p class="winter daejeon"></p>
+                        <p class="winter gwangju"></p>
+                        <p class="winter jeju"></p>
+                    </div>
+                    <div class="img img4">
+                        <p class="spring seoul">인천 대공원</p>
+                        <p class="spring busan">대구 지저동 벚꽃터널</p>
+                        <p class="spring gangwon">강원도 속초 설악산</p>
+                        <p class="spring daejeon">전주 동물원</p>
+                        <p class="spring gwangju">남원 광한루</p>
+                        <p class="spring jeju">제주 걸매 생태 공원</p>
+
+                        <p class="summer seoul"></p>
+                        <p class="summer busan"></p>
+                        <p class="summer gangwon"></p>
+                        <p class="summer daejeon"></p>
+                        <p class="summer gwangju"></p>
+                        <p class="summer jeju"></p>
+
+                        <p class="fall seoul"></p>
+                        <p class="fall busan"></p>
+                        <p class="fall gangwon"></p>
+                        <p class="fall daejeon"></p>
+                        <p class="fall gwangju"></p>
+                        <p class="fall jeju"></p>
+
+                        <p class="winter seoul"></p>
+                        <p class="winter busan"></p>
+                        <p class="winter gangwon"></p>
+                        <p class="winter daejeon"></p>
+                        <p class="winter gwangju"></p>
+                        <p class="winter jeju"></p>
+                    </div>
+                    <div class="img img5">
+                        <p class="spring seoul">인천 수봉 공원</p>
+                        <p class="spring busan">대구 이월드</p>
+                        <p class="spring gangwon">강원도 춘천댐</p>
+                        <p class="spring daejeon">전주 완산 공원</p>
+                        <p class="spring gwangju">장성 호수변길</p>
+                        <p class="spring jeju">제주 칠십리 공원</p>
+
+                        <p class="summer seoul"></p>
+                        <p class="summer busan"></p>
+                        <p class="summer gangwon"></p>
+                        <p class="summer daejeon"></p>
+                        <p class="summer gwangju"></p>
+                        <p class="summer jeju"></p>
+
+                        <p class="fall seoul"></p>
+                        <p class="fall busan"></p>
+                        <p class="fall gangwon"></p>
+                        <p class="fall daejeon"></p>
+                        <p class="fall gwangju"></p>
+                        <p class="fall jeju"></p>
+
+                        <p class="winter seoul"></p>
+                        <p class="winter busan"></p>
+                        <p class="winter gangwon"></p>
+                        <p class="winter daejeon"></p>
+                        <p class="winter gwangju"></p>
+                        <p class="winter jeju"></p>
+                    </div>
+                    <div class="img img6">
+                        <p class="spring seoul">수원 만석 공원</p>
+                        <p class="spring busan">울산 무거천</p>
+                        <p class="spring gangwon">강원도 영월 연당원</p>
+                        <p class="spring daejeon">전주 아중 호수</p>
+                        <p class="spring gwangju">장성 유채꽃밭</p>
+                        <p class="spring jeju">제주 한림 공원</p>
+
+                        <p class="summer seoul"></p>
+                        <p class="summer busan"></p>
+                        <p class="summer gangwon"></p>
+                        <p class="summer daejeon"></p>
+                        <p class="summer gwangju"></p>
+                        <p class="summer jeju"></p>
+
+                        <p class="fall seoul"></p>
+                        <p class="fall busan"></p>
+                        <p class="fall gangwon"></p>
+                        <p class="fall daejeon"></p>
+                        <p class="fall gwangju"></p>
+                        <p class="fall jeju"></p>
+
+                        <p class="winter seoul"></p>
+                        <p class="winter busan"></p>
+                        <p class="winter gangwon"></p>
+                        <p class="winter daejeon"></p>
+                        <p class="winter gwangju"></p>
+                        <p class="winter jeju"></p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script type="module" src="./js/travel.js"></script>
+</body>
+</html>

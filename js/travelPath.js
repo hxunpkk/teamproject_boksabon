@@ -102,8 +102,8 @@ import dataArr from "./EnglishName.js";
                             this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
                         })
                     }
-                    $('.modal3').css('z-index', '-100')
-                    $('.threeModal').css('z-index', '-100')
+                    $('.modal3').css('opacity', '0')
+                    $('.threeModal').css('opacity', '0')
 
 
                 }
@@ -179,14 +179,16 @@ import dataArr from "./EnglishName.js";
 
 
         $('.Modal_page ul li .sect3').on('click', function () {
-            $('.modal1').css('z-index', '-100')
-            $('.modal2').css('z-index', '-100')
-            $('.modal3').css('z-index', '100')
-            $('.modal4').css('z-index', '-100')
-            $('.oneModal').css('z-index', '-100')
-            $('.twoModal').css('z-index', '-100')
-            $('.threeModal').css('z-index', '100')
-            $('.fourModal').css('z-index', '-100')
+            $('.modal1').css('opacity', '0')
+            $('.modal2').css('opacity', '0')
+            $('.modal3').css('opacity', '1')
+            $('.modal3').css('z-index', '2000')
+            $('.modal4').css('opacity', '0')
+            $('.oneModal').css('opacity', '0')
+            $('.twoModal').css('opacity', '0')
+            $('.threeModal').css('opacity', '1')
+            $('.threeModal').css('z-index', '2000')
+            $('.fourModal').css('opacity', '0')
             /*             $('body').append(`<div class="modal3"></div>`)
                         $('.modal3').prepend(`<div class="imgbox threeModal"></div>`)
                         $('.imgbox').prepend(`<a></a>`)

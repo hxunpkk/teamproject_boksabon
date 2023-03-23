@@ -27,22 +27,6 @@ import dataArr from "./EnglishName.js";
             }
         })
 
-        $('.box.sect4').on('click', function () {
-            $('.modal1').css('opacity', '0')
-            $('.modal2').css('opacity', '0')
-            $('.modal3').css('opacity', '0')
-            $('.modal4.modal').css('opacity', '1')
-            $('.modal4.modal').css('z-index', '2000')
-            $('.oneModal').css('opacity', '0')
-            $('.twoModal').css('opacity', '0')
-            $('.threeModal').css('opacity', '0')
-            $('.fourModal.modalSanse').css('opacity', '1')
-            $('.fourModal.modalSanse').css('z-index', '2000')
-                return false;
-    
-        })
-    
-
         // 대기오염 api
         const dustData = (latData, lonData) => {
             $.ajax({
@@ -52,7 +36,7 @@ import dataArr from "./EnglishName.js";
                 data: { lat: latData, lon: lonData },
                 success: function (data) {
                     dustVar(data.list[0].main.aqi);
-                    // console.log(data)
+                    console.log(data)
                 },
                 error: function (xhr) {
                     alert(xhr.status)
@@ -79,6 +63,13 @@ import dataArr from "./EnglishName.js";
         }
     }
 
+    $('.Modal_page ul li .sect4').on('click', function () {
+        $('body').append(`<div class="modal"></div>`)
+        $('.modal').prepend(`<div class="imgbox oneModal"></div>`)
+        $('.imgbox').prepend(`<a>${span3}</a>`)
+        $('.imgbox a').after(`<button type="button">닫기</button>`)
+        return false
+    })
 
 
     // ajax에서 보낸 값(한글)을 영어로 바꿔주는 폼

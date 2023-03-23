@@ -55,14 +55,16 @@ import dataArr from "./EnglishName.js";
 
 
 
-    $('.Modal_page ul li .sect1').on('click', function () {
-        $('.oneModal').css('opacity', '1')
-        $('.oneModal').css('z-index', '2000')
+    $('.box.sect1').on('click', function () {
+/*         $('.back_form').css('background', 'rgba(0, 0, 0, 0.5)')
+        $('.back_form').css('backdrop-filter', "blur(10px)")
+ */        $('.oneModal.modalSanse').css('opacity', '1')
+        $('.oneModal.modalSanse').css('z-index', '2000')
         $('.twoModal').css('opacity', '0')
         $('.threeModal').css('opacity', '0')
         $('.fourModal').css('opacity', '0')
-        $('.modal1').css('opacity', '1')
-        $('.modal1').css('z-index', '2000')
+        $('.modal1.modal').css('opacity', '1')
+        $('.modal1.modal').css('z-index', '2000')
         $('.modal2').css('opacity', '0')
         $('.modal3').css('opacity', '0')
         $('.modal4').css('opacity', '0')
@@ -74,6 +76,17 @@ import dataArr from "./EnglishName.js";
 
         } */
         return false;
+
+    })
+    $('.modalBackForm').on('click', function () {
+        $('.modal1').css('opacity', '0')
+        $('.modal1').css('z-index', '0')
+        $('.modal2').css('opacity', '0')
+        $('.modal2').css('z-index', '0')
+        $('.modal3').css('opacity', '0')
+        $('.modal3').css('z-index', '0')
+        $('.modal4').css('opacity', '0')
+        $('.modal4').css('z-index', '0')
 
     })
 

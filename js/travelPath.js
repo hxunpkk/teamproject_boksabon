@@ -25,8 +25,9 @@ import dataArr from "./EnglishName.js";
                     koreaAreaNameValue = koreaAreaNameEng[0].toLowerCase()
                     // console.log(koreaAreaNameValue)
                     $('.modal3').remove()
-                    $('body').append(`<div class="modal3"></div>`)
-                    $('.modal3').prepend(`<div class="imgbox threeModal"></div>`)
+                    $('body').append(`<div class="modal3 modal"></div>`)
+                    $(".modal").prepend(`<div class="modalBackForm"></div>`)                 
+                    $('.modal3').prepend(`<div class="imgbox threeModal modalSanse"></div>`)
                     $('.imgbox').prepend(`<a></a>`)
                     $('.imgbox a').after(`<button type="button" class="button">닫기</button>`)
 
@@ -102,6 +103,17 @@ import dataArr from "./EnglishName.js";
                             this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
                         })
                     }
+                    $('.modalBackForm').on('click', function () {
+                        $('.modal1').css('opacity', '0')
+                        $('.modal1').css('z-index', '0')
+                        $('.modal2').css('opacity', '0')
+                        $('.modal2').css('z-index', '0')
+                        $('.modal3').css('opacity', '0')
+                        $('.modal3').css('z-index', '0')
+                        $('.modal4').css('opacity', '0')
+                        $('.modal4').css('z-index', '0')
+                
+                    })
                     $('.modal3').css('opacity', '0')
                     $('.threeModal').css('opacity', '0')
 
@@ -178,7 +190,7 @@ import dataArr from "./EnglishName.js";
 
 
 
-        $('.Modal_page ul li .sect3').on('click', function () {
+        $('.box.sect3').on('click', function () {
             $('.modal1').css('opacity', '0')
             $('.modal2').css('opacity', '0')
             $('.modal3').css('opacity', '1')
@@ -273,6 +285,17 @@ import dataArr from "./EnglishName.js";
 
         })
 
+        $('.modalBackForm').on('click', function () {
+            $('.modal1').css('opacity', '0')
+            $('.modal1').css('z-index', '0')
+            $('.modal2').css('opacity', '0')
+            $('.modal2').css('z-index', '0')
+            $('.modal3').css('opacity', '0')
+            $('.modal3').css('z-index', '0')
+            $('.modal4').css('opacity', '0')
+            $('.modal4').css('z-index', '0')
+
+        })
 
         let stoday = new Date()
 

@@ -2,277 +2,257 @@
 <html lang="ko">
 
 <head>
-
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/travel.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="icon" href="/img/weather_icon.jpg">
-    <link rel="stylesheet" href="./css/rwdindex.css">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<script src="./js/jquery-1.12.4.min.js"></script>
+	<script src="./js/slick.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
+	<link rel="stylesheet" href="./css/slick.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	<link rel="stylesheet" href="./css/travel.css" />
+	<link rel="stylesheet" href="./css/reset.css" />
+	<link rel="stylesheet" href="./css/hover.css">
+	<link rel="icon" href="/img/weather_icon.jpg" />
+	<link rel="stylesheet" href="./css/rwdindex.css" />
 </head>
 
 <body>
-    <div class="loader">
-        <i class="fas fa-spinner fa-spin"></i>
-    </div>
-    <!-- <span id="clock"></span> -->
-    <div class="back_form">
-        <div class="CITY_description">
-            <div class="current_temp"></div>
-            <div class="city"></div>
-        </div>
-        <article class="articleModal">
-            <form class="search_form">
-                <input type="text" Id="data1" value="서울">
-                <button type="submit" value="send"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <div class="Modal_page">
-                <ul class="swiper-container myswiper">
-                    <div class="swiper-wrapper">
-                        <li class="swiper-slide slider1">
-                            <div class="zoom sect1 dress_modal">
-                                <div class="slide_span">
-                                    <span>Weather Cloth</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="swiper-slide slider2">
-                            <div class="zoom sect2 food_modal">
-                                <div class="slide_span">
-                                    <span>Area Food</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="swiper-slide slider3">
-                            <div class="zoom sect3 travel_modal">
-                                <div class="slide_span">
-                                    <span>Season Travel</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="swiper-slide slider4">
-                            <div class="zoom sect4 dust_modal">
-                                <div class="slide_span">
-                                    <span>Dust Information </span>
-                                </div>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="swiper-pagination"></div>
-            </div>
+	<!-- <span id="clock"></span> -->
+	<iframe src="./클론코딩/intro.html" class="introClone"></iframe>
+	<div id="cover">
+		<form method="get" class="search_form" onsubmit="return false">
+			<div class="tb">
+				<div class="text_box">
+					<span class="text"></span><span class="textAni">|</span>
+				</div>
+				<input type="text" Id="data1">
+				<div class="td" id="s-cover">
+					<button type="submit" value="send" class="search_btn">
+						<div id="s-circle"></div>
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="back_form">
+		<video class="bg-video__content" autoplay muted loop poster="./img/투명한이미지.png">
+			<source class="bg_video_mp4" src="./img/main_img20.mp4">
+			</source>
+		</video>
+		<div class="CITY_description">
+			<div class="current_temp"></div>
+			<div class="city"></div>
+		</div>
+		
+		<article class="articleModal">
+			<div class="articleModal_ui">
+				<section class="skills">
+					<div class="container">
+						<div class="skills-flex-container">
+							<div class="box sect1">
+								<div class="image">
+									<img src="./img/home_img1.png"
+									alt="xd">
+								</div>
+								<div class="title titleColor1">옷 은 뭐 입 지 ?</div>
+							</div>
+							<div class="box sect2">
+								<div class="image">
+									<img src="./img/home_img2.png"
+										alt="figma">
+								</div>
+								<div class="title titleColor2">모 먹 으 까 ?</div>
+							</div>
+							<div class="box sect3">
+								<div class="image">
+									<img src="./img/home_img3.png"
+										alt="html">
+								</div>
+								<div class="title titleColor3">갈 만 한 곳 은 ?</div>
+							</div>
+							<div class="box sect4">
+								<div class="image">
+									<img src="./img/home_img4.png"
+										alt="css">
+								</div>
+								<div class="title titleColor4">미 세 먼 지 는 ?</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</article>
+	</div>
+	<script type="text/javascript">
+		$(".searchbtn").click(function () {
+			$(this).toggleClass("bg-green");
+			$(".fas").toggleClass("color-white");
+			$(".input").focus().toggleClass("active-width").val("");
+		});
+	</script>
+	<script type="module">
+		import dataArr from "./js/EnglishName.js";
+		let koreaAreaName = "";
 
-            <div class="weather">
-                <h1>Weather Details</h1>
-                <div class="weather_text">
-                    <div>
-                        <span>Max/Min Temp</span>
-                        <span class="Temp_right">
-                            <span class="temp_min"></span>
-                            <span class="temp_max"></span>
-                        </span>
-                    </div>
-                    <div>
-                        <span>Humidity</span><span class="humidity"></span>
-                    </div>
+		const weatherApi = (area) => {
+			$.ajax({
+				url: "http://api.openweathermap.org/data/2.5/weather?country=KR&name=Republic of Korea&id=1835841&state=&lang=KR&appid=d5948ec3ace590812f0049bbdb822c43&units=metric",
+				dataType: "json",
+				data: { q: area },
+				type: "GET",
+				async: "false",
+				success: function (resp) {
+					// console.log(resp);
+					// console.log(resp.weather[0].id)
+					// console.log(resp.weather[0].icon)
 
-                    <div>
-                        <span>Windy</span><span class="wind"></span>
-                    </div>
-                    <div>
-                        <span>Dust</span><span class="dust"></span>
-                    </div>
-                    <div>
-                        <span>Cloud</span>
-                        <div class="cloud"></div>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </div>
+					// 한글 영어로 변환 기능
+					let ddArrctBc = dataArr.filter((value) => {
+						return value.eng === area;
+					});
 
-    <script type="module">
-        import dataArr from "./js/EnglishName.js";
-        let koreaAreaName = '';
+					// 입력한 한글 지역이름
+					koreaAreaName = ddArrctBc[0].kor;
 
+					// 날씨 데이터 담은 변수들
+					var $weather_description = resp.weather[0].description;
+					var $Temp = Math.floor(resp.main.temp) + "º";
+					var $humidity =
+						"&nbsp;&nbsp;&nbsp;&nbsp;" + resp.main.humidity + " %";
+					var $wind = "&nbsp;&nbsp;&nbsp;&nbsp;" + resp.wind.speed + " m/s";
+					var $city = koreaAreaName;
+					var $cloud = "&nbsp;&nbsp;&nbsp;&nbsp;" + resp.clouds.all + "%";
+					var $temp_min = "" + Math.floor(resp.main.temp_min) + "º";
+					var $temp_max =
+						"&nbsp/&nbsp;" + Math.floor(resp.main.temp_max) + "º";
 
+					$(
+						".modal1 .modal4 .bg_video_mp4 .weather_MainVAR .icon, .description, .current, .humid, .windy, .dosi, .goorem, .minGion, .maxGion"
+					).remove();
 
-        const weatherApi = (area) => {
-            $.ajax({
-                url: "http://api.openweathermap.org/data/2.5/weather?country=KR&name=Republic of Korea&id=1835841&state=&lang=KR&appid=d5948ec3ace590812f0049bbdb822c43&units=metric",
-                dataType: "json",
-                data: { q: area },
-                type: "GET",
-                async: "false",
-                success: function (resp) {
-                    // console.log(resp);
-                    // console.log(resp.weather[0].id)
-                    // console.log(resp.weather[0].icon)
+					//날씨 한단어로 설명 ex)맑음
+					let description = `<div class="description">`;
+					description += `${$weather_description}`;
+					description += `</div>`;
+					$(".weather_description").prepend(description);
 
-                    // 한글 영어로 변환 기능
-                    let ddArrctBc = dataArr.filter((value) => {
-                        return value.eng === area
-                    })
+					//현재 온도
+					let current = `<div class="current">`;
+					current += `${$Temp}`;
+					current += `</div>`;
+					$(".current_temp").prepend(current);
 
-                    // 입력한 한글 지역이름
-                    koreaAreaName = ddArrctBc[0].kor;
+					//습도
+					let humid = `<span class="humid">`;
+					humid += `${$humidity}`;
+					humid += `</span>`;
+					$(".humidity").prepend(humid);
 
-                    // 날씨 데이터 담은 변수들
-                    var $weather_description = resp.weather[0].description;
-                    var $Temp = Math.floor(resp.main.temp) + 'º';
-                    var $humidity = '&nbsp;&nbsp;&nbsp;&nbsp;' + resp.main.humidity + ' %';
-                    var $wind = '&nbsp;&nbsp;&nbsp;&nbsp;' + resp.wind.speed + ' m/s';
-                    var $city = area;
-                    var $cloud = '&nbsp;&nbsp;&nbsp;&nbsp;' + resp.clouds.all + "%";
-                    var $temp_min = '' + Math.floor(resp.main.temp_min) + 'º';
-                    var $temp_max = '&nbsp/&nbsp;' + Math.floor(resp.main.temp_max) + 'º';
+					//바람
+					let windy = `<span class="windy">`;
+					windy += `${$wind}`;
+					windy += `</span>`;
+					$(".wind").prepend(windy);
 
-                    $('.modal1 .modal4 .bg_video_mp4 .weather_MainVAR .icon, .description, .current, .humid, .windy, .dosi, .goorem, .minGion, .maxGion').remove()
+					//도시 명
+					let dosi = `<div class="dosi">`;
+					dosi += `${$city}`;
+					dosi += `</div>`;
+					$(".city").append(dosi);
 
-                    //날씨 한단어로 설명 ex)맑음
-                    let description = `<div class="description">`
-                    description += `${$weather_description}`
-                    description += `</div>`
-                    $('.weather_description').prepend(description);
+					//구름 양
+					let goorem = `<div class="goorem">`;
+					goorem += `${$cloud}`;
+					goorem += `</div>`;
+					$(".cloud").append(goorem);
 
-                    //현재 온도
-                    let current = `<div class="current">`
-                    current += `${$Temp}`
-                    current += `</div>`
-                    $('.current_temp').prepend(current);
+					//최고 기온
+					let minGion = `<span class="minGion">`;
+					minGion += `${$temp_min}`;
+					minGion += `</span>`;
+					$(".temp_min").append(minGion);
 
-                    //습도
-                    let humid = `<span class="humid">`
-                    humid += `${$humidity}`
-                    humid += `</span>`
-                    $('.humidity').prepend(humid);
+					// 최저 기온
+					let maxGion = `<span class="maxGion">`;
+					maxGion += `${$temp_max}`;
+					maxGion += `</span>`;
+					$(".temp_max").append(maxGion);
 
-                    //바람
-                    let windy = `<span class="windy">`
-                    windy += `${$wind}`
-                    windy += `</span>`
-                    $('.wind').prepend(windy);
+					// 날씨에 따른 배경화면 전환
 
-                    //도시 명
-                    let dosi = `<div class="dosi">`
-                    dosi += `${$city}`
-                    dosi += `</div>`
-                    $('.city').append(dosi);
+					let weather_Main = resp.weather[0].main;
+					let weather_id = resp.weather[0].id;
+					let weather_icon = resp.weather[0].icon;
+				},
+			});
+		};
 
-                    //구름 양
-                    let goorem = `<div class="goorem">`
-                    goorem += `${$cloud}`
-                    goorem += `</div>`
-                    $('.cloud').append(goorem);
+		$("body").append(`<div class="modal1 modal"></div>`);
+		$("body").append(`<div class="modal4 modal"></div>`);
+		$(".modal1").prepend(`<div class="oneModal modalSanse"></div>`);
+		$(".modal").prepend(`<div class="modalBackForm"></div>`);
+		$(".modal4").prepend(`<div class="fourModal modalSanse"></div>`);
+		$(".oneModal").prepend(`<a></a>`);
+		$(".fourModal").prepend(`<a></a>`);
+		$(".oneModal a").after(
+			`<button type="button" class="button">닫기</button>`
+		);
+		$(".fourModal a").after(
+			`<button type="button" class="button">닫기</button>`
+		);
+		$(".oneModal").prepend(
+			`<iframe src="/codyPagetest.html" style="width:100%; height:100%"></iframe>`
+		);
+		$(".fourModal").prepend(
+			`<iframe src="/mise.html" style="width:100%; height:100%"></iframe>`
+		);
 
-                    //최고 기온
-                    let minGion = `<span class="minGion">`
-                    minGion += `${$temp_min}`
-                    minGion += `</span>`
-                    $('.temp_min').append(minGion);
+		$(".modal1").css("opacity", "0");
+		$(".modal4").css("opacity", "0");
+		$(".oneModal").css("opacity", "0");
+		$(".fourModal").css("opacity", "0");
 
-                    // 최저 기온
-                    let maxGion = `<span class="maxGion">`
-                    maxGion += `${$temp_max}`
-                    maxGion += `</span>`
-                    $('.temp_max').append(maxGion);
+		// ajax에서 보낸 값(한글)을 영어로 바꿔주는 폼
+		$("form").on("submit", function () {
+			// inputDataVal = $('#data1').val('서울');
+			var inputDataVal = $("#data1").val();
+			let ddArrct = dataArr.filter((value) => {
+				return value.kor === inputDataVal;
+			});
+			// console.log(ddArrct)
+			weatherApi(ddArrct[0].eng);
+			return false;
+		});
+		weatherApi("Seoul,KR");
 
-
-
-
-                    // 날씨에 따른 배경화면 전환
-
-                    let weather_Main = resp.weather[0].main
-                    let weather_id = resp.weather[0].id;
-                    let weather_icon = resp.weather[0].icon;
-                    if (weather_Main == 'Clouds' || weather_id === 500) {
-                        $(".back_form").append(`<video class="bg-video__content" autoplay muted loop poster="./img/투명한이미지.png"></video>`)
-                        $(".bg-video__content").append(`<source class="bg_video_mp4"></source>`)
-                        $(".bg_video_mp4").attr("src", "./img/main_img18.mp4");
-
-                    } else if (weather_Main == 'Clear') {
-                        $(".back_form").append(`<video class="bg-video__content" autoplay muted loop poster="./img/투명한이미지.png"></video>`)
-                        $(".bg-video__content").append(`<source class="bg_video_mp4"></source>`)
-                        $(".bg_video_mp4").attr("src", "./img/main_img19.mp4");
-                    } else if (601 <= weather_id && weather_id <= 699) {
-                        $(".back_form").append(`<video class="bg-video__content" autoplay muted loop poster="./img/투명한이미지.png"></video>`)
-                        $(".bg-video__content").append(`<source class="bg_video_mp4"></source>`)
-                        $(".bg_video_mp4").attr("src", "./img/main_img18.mp4");
-                    } else if (weather_icon == '50d') {
-                        $(".back_form").append(`<video class="bg-video__content" autoplay muted loop poster="./img/투명한이미지.png"></video>`)
-                        $(".bg-video__content").append(`<source class="bg_video_mp4"></source>`)
-                        $(".bg_video_mp4").attr("src", "./img/main_img18.mp4");
-                        $('#data1').css("border", "1px solid #000")
-                    } else {
-                        $(".back_form").append(`<video class="bg-video__content" autoplay muted loop poster="./img/투명한이미지.png"></video>`)
-                        $(".bg-video__content").append(`<source class="bg_video_mp4"></source>`)
-                        $(".bg_video_mp4").attr("src", "./img/main_img19.mp4");
-                    }
-                }
-            })
-        }
-        $('body').append(`<div class="modal1"></div>`)
-        $('body').append(`<div class="modal4"></div>`)
-        $('.modal1').prepend(`<div class="oneModal"></div>`)
-        $('.modal4').prepend(`<div class="fourModal"></div>`)
-        $('.oneModal').prepend(`<a></a>`)
-        $('.fourModal').prepend(`<a></a>`)
-        $('.oneModal a').after(`<button type="button" class="button">닫기</button>`)
-        $('.fourModal a').after(`<button type="button" class="button">닫기</button>`)
-        $('.oneModal').prepend(`<iframe src="/codyPage.html" style="width:100%; height:100%"></iframe>`)
-        $('.fourModal').prepend(`<iframe src="/mise.html" style="width:100%; height:100%"></iframe>`)
-
-        $('.modal1').css('opacity', '0')
-        $('.modal4').css('opacity', '0')
-        $('.oneModal').css('opacity', '0')
-        $('.fourModal').css('opacity', '0')
-
-
-        // ajax에서 보낸 값(한글)을 영어로 바꿔주는 폼
-        $('form').on('submit', function () {
-            // inputDataVal = $('#data1').val('서울');
-            var inputDataVal = $('#data1').val();
-            let ddArrct = dataArr.filter((value) => {
-                return value.kor === inputDataVal
-            })
-            // console.log(ddArrct)
-            $('.bg-video__content').remove();
-            weatherApi(ddArrct[0].eng);
-            return false
-        })
-        weatherApi('Seoul,KR')
-
-        new Swiper('.myswiper', {
-            // 큐브 효과 사용
-            effect: 'cube',
-            // 슬라이드 반복
-            loop: true,
-            // 페이징 설정
-            pagination: {
-                // 페이징 요소의 클래스명
-                el: '.swiper-pagination',
-                // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
-                clickable: true,
-            },
-            autoplay: true,
-        });
-    </script>
-    <script src="./js/index.js"></script>
-    <script type="module" src="./js/clothPath.js"></script>
-    <script type="module" src="./js/foodPath.js"></script>
-    <script type="module" src="./js/travelPath.js"></script>
-    <script type="module" src="./js/dustPath.js"></script>
+		new Swiper(".myswiper", {
+			// 큐브 효과 사용
+			effect: "cube",
+			// 슬라이드 반복
+			loop: true,
+			// 페이징 설정
+			pagination: {
+				// 페이징 요소의 클래스명
+				el: ".swiper-pagination",
+				// 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+				clickable: true,
+			},
+			autoplay: true,
+		});
+	</script>
+	<script src="./js/index.js"></script>
+	<script type="module" src="./js/clothPath.js"></script>
+	<script type="module" src="./js/foodPath.js"></script>
+	<script type="module" src="./js/travelPath.js"></script>
+	<script type="module" src="./js/dustPath.js"></script>
 </body>
 
 </html>

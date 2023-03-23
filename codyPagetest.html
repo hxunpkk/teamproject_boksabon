@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/codyPage.css">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 
+        오늘의 추천 의상
+        온도별로 3개 + (우산여부+@) 추천하기
+
+     -->
+    <!-- <a href="https://kr.freepik.com/free-vector/large-set-of-clothes-for-men-and-women-fashion-icons-vector-illustration_10704987.htm#query=%EC%98%B7&position=8&from_view=keyword&track=sph">작가 macrovector</a> 출처 Freepik -->
+
+
+    <div class="title">
+    </div>
+    <div class="contents">
+        <div class="wardrobe">
+            <div class="front">
+                <div class="door"></div>
+                <div class="second-door"></div>
+            </div>
+            <div class="inside">
+                <div class="rail"></div>
+                <div class="hangers"></div>
+                <div class="boots"></div>
+                <div class="scarf"></div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+        <div class="stats">
+            <h3>TODAY CODY</h3>
+            <ul>
+                <li>
+                    <div class="text">반팔</div>
+                    <div class="clothes">
+                        <img src="./img/clothes/shirts1.svg" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="text">반바지</div>
+                    <div class="clothes">
+                        <img src="./img/clothes/pants1.svg" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="text">블라우스</div>
+                    <div class="clothes">
+                        <img src="./img/clothes/set1.svg" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="text">모자</div>
+                    <div class="clothes">
+                        <img src="./img/clothes/hat.svg" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="module">
+        $('.wardrobe').mouseover(function () {
+            $('.stats').css('opacity', 1)
+            $('.typing').css('display', 'none')
+        })
+        $('.wardrobe').mouseout(function () {
+            $('.stats').css('opacity', 0)
+            $('.typing').css('display', 'block')
+        })
+    </script>
+    <script type="module" src="./js/clothPath.js"></script>
+</body>
+
+</html>

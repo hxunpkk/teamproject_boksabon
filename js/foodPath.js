@@ -24,7 +24,6 @@ import dataArr from "./EnglishName.js";
                 $(".modal").prepend(`<div class="modalBackForm"></div>`)                 
                 $('.modal2').prepend(`<div class="twoModal modalSanse"></div>`)
                 $('.twoModal').prepend(`<a></a>`)
-                $('.twoModal a').after(`<button type="button" class="button">닫기</button>`)
                 $('.twoModal').prepend(`
                             <iframe name="ifrm" id="iframe" src="/foodPage.html" style="width:100%; height:100%; opacity:1;"></iframe>`)
 
@@ -43,12 +42,12 @@ import dataArr from "./EnglishName.js";
     $('.box.sect2').on('click', function () {
         $('.modal1').css('opacity', '0')
         $('.modal2').css('opacity', '1')
-        $('.modal2').css('z-index', '2000')
+        $('.modal2').css('z-index', '999999')
         $('.modal3').css('opacity', '0')
         $('.modal4').css('opacity', '0')
         $('.oneModal').css('opacity', '0')
         $('.twoModal').css('opacity', '1')
-        $('.twoModal').css('z-index', '2000')
+        $('.twoModal').css('z-index', '999999')
         $('.threeModal').css('opacity', '0')
         $('.fourModal').css('opacity', '0')
     return false;
@@ -63,7 +62,8 @@ import dataArr from "./EnglishName.js";
         $('.modal3').css('z-index', '0')
         $('.modal4').css('opacity', '0')
         $('.modal4').css('z-index', '0')
-
+        $('.home_btn3').css('opacity', '0')
+        $('.home_btn3').css('z-index', '0')
     })
     // ajax에서 보낸 값(한글)을 영어로 바꿔주는 폼
     $('form').on('submit', function () {

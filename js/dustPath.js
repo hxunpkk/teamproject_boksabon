@@ -32,12 +32,12 @@ import dataArr from "./EnglishName.js";
             $('.modal2').css('opacity', '0')
             $('.modal3').css('opacity', '0')
             $('.modal4.modal').css('opacity', '1')
-            $('.modal4.modal').css('z-index', '2000')
+            $('.modal4.modal').css('z-index', '999999')
             $('.oneModal').css('opacity', '0')
             $('.twoModal').css('opacity', '0')
             $('.threeModal').css('opacity', '0')
             $('.fourModal.modalSanse').css('opacity', '1')
-            $('.fourModal.modalSanse').css('z-index', '2000')
+            $('.fourModal.modalSanse').css('z-index', '999999')
                 return false;
     
         })

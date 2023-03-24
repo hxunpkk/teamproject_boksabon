@@ -1,10 +1,4 @@
 $(document).ready(function () {
-	setTimeout(function () {
-		$(".loader").fadeOut(500);
-	}, 2000);
-});
-
-$(document).ready(function () {
 	var gdata = [];
 	$.ajax({
 		type: "GET",
@@ -65,15 +59,15 @@ $(document).ready(function () {
 			labels: ["서울", "경기", "강원", "대전", "광주", "부산", "제주"],
 			datasets: [
 				{
-					label: "pm10Value",
+					label: "",
 					backgroundColor: [
-						"rgba(255, 99, 132, 0.5)",
-						"rgba(54, 162, 235, 0.5)",
-						"rgba(255, 206, 86, 0.5)",
-						"rgba(75, 192, 192, 0.5)",
-						"rgba(153, 102, 255, 0.5)",
-						"rgba(255, 159, 64, 0.5)",
-						"rgba(201, 203, 207, 0.5)",
+						"rgba(255, 99, 132, 0.7)",
+						"rgba(54, 162, 235, 0.7)",
+						"rgba(255, 206, 86, 0.7)",
+						"rgba(75, 192, 192, 0.7)",
+						"rgba(153, 102, 255, 0.7)",
+						"rgba(255, 159, 64, 0.7)",
+						"rgba(201, 203, 207, 0.7)",
 					],
 					borderColor: [
 						"rgb(255, 99, 132,1.5)",
@@ -98,6 +92,7 @@ $(document).ready(function () {
 				fontColor: "rgba(46, 49, 49, 1)",
 			},
 			legend: {
+				display: false,
 				labels: {
 					display: false,
 					fontColor: "rgba(83, 51, 237, 1)",

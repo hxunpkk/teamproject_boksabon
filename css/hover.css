@@ -13,12 +13,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-img {
+/* img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+     
   height: 100%;
-}
+} */
 
 .container {
   display: flex;
@@ -49,12 +49,13 @@ img {
     border: 10px solid #fff;
     transition: all 0.3s ease-in;
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(245, 245, 245, 0.7);
     cursor: pointer;
 
 }
 .skills .skills-flex-container .box .image {
   transition: all 0.3s ease-in-out 0.1s;
+  object-fit: cover;
 }
 .skills .skills-flex-container .box .image img {
   max-width: 75px;

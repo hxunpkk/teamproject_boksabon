@@ -159,21 +159,34 @@
 					var $temp_min = "&nbsp;&nbsp;&nbsp;&nbsp;" + Math.floor(resp.main.temp_min) + "º";
 					var $temp_max =
 						"&nbsp;&nbsp;&nbsp;&nbsp;" + Math.floor(resp.main.temp_max) + "º";
-						console.log($humidity)
+					var $wiconUrl = '<img class="weatherIcon" src="http://openweathermap.org/img/wn/' + resp.weather[0].icon + '.png" alt="'
+					+ resp.weather[0].description + '">';
+
+					let $wicon = '';
+
+					if(resp.weather[0].description == '맑음'){
+						 $wicon = '⛅'
+					}else {
+						$wicon =  $wiconUrl;
+					}
+					
+
+
+
 					$(
 						".modal1 .modal4 .bg_video_mp4 .weather_MainVAR .icon, .description, .current, .humid, .windy, .dosi, .goorem, .minGion, .maxGion"
 					).remove();
 					$('.dronWeather').remove();
 					// 드론에 날씨 데이터 넣기
 					let dronData = `<div class="dronWeather">`;
-						dronData += koreaAreaName + " 날씨를 알려줄게요 ⛅" ;
+						dronData += "&nbsp;&nbsp;&nbsp;&nbsp;" + koreaAreaName + " 날씨를 알려줄게요 " +  $wicon ;
 						dronData +=  `<span class="dronData">`;
 						dronData +=  `<br>
-						<div class="dron_text">날씨 : ${$weather_description}</div>
-						<div class="dron_text">강수량 : ${$humidity}</div> 
-						<div class="dron_text">바람 : ${$wind}</div>
-						<div class="dron_text">최고 기온 : ${$temp_max}</div>
-						<div class="dron_text">최저 기온 : ${$temp_min}</div>
+						<div class="dron_text">날씨 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${$weather_description}</div>
+						<div class="dron_text">강수량&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${$humidity}</div> 
+						<div class="dron_text">바람 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${$wind}</div>
+						<div class="dron_text">최고 기온 &nbsp;: ${$temp_max}</div>
+						<div class="dron_text">최저 기온 &nbsp;: ${$temp_min}</div>
 						<br><br>
 						
 						`;
@@ -246,7 +259,7 @@
 		$(".oneModal").prepend(`<a></a>`);
 		$(".fourModal").prepend(`<a></a>`);
 		$(".oneModal").prepend(
-			`<iframe src="/codyPagetest.html" style="width:100%; height:100%"></iframe>`
+			`<iframe src="/codyPage.html" style="width:100%; height:100%"></iframe>`
 		);
 		$(".fourModal").prepend(
 			`<iframe src="/mise.html" style="width:100%; height:100%"></iframe>`

@@ -1,142 +1,379 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/codyPage.css">
-    <title>Document</title>
+    <title>3D Room</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/stats.css">
+    <link rel="stylesheet" href="./css/info.css">
+    <script src="./js/codyPage.js" defer></script>
     <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/slick.min.js"></script>
+    
 </head>
-
 <body>
-
-    <!-- 
-        오늘의 추천 의상
-        온도별로 3개 + (우산여부+@) 추천하기
-
-     -->
-    <!-- <a href="https://kr.freepik.com/free-vector/large-set-of-clothes-for-men-and-women-fashion-icons-vector-illustration_10704987.htm#query=%EC%98%B7&position=8&from_view=keyword&track=sph">작가 macrovector</a> 출처 Freepik -->
-
-    <div class="wrap">
+    <div class="house" id="h"> 
+        <div class="h-lights">
+          <div class="h-light"></div>
+          <div class="h-light"></div>
+          <div class="h-light"></div>
+          <div class="h-light"></div>
+          <div class="h-light"></div>
+          <div class="h-light"></div>
+        </div>
+        <div class="h-shadow"></div>
+        <div class="alt">
+          <div class="alt__front face"> </div>
+          <div class="alt__back face"> </div>
+          <div class="alt__right face"> </div>
+          <div class="alt__left face"> </div>
+          <div class="alt__top face"> 
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+          </div>
+          <div class="alt__bottom face"> </div>
+        </div>
+        <div class="alb">
+          <div class="alb__front face"> </div>
+          <div class="alb__back face"> </div>
+          <div class="alb__right face"> </div>
+          <div class="alb__left face"> </div>
+          <div class="alb__top face"> </div>
+          <div class="alb__bottom face"> </div>
+        </div>
+        <div class="arb">
+          <div class="arb__front face"> </div>
+          <div class="arb__back face"> </div>
+          <div class="arb__right face"> </div>
+          <div class="arb__left face"> </div>
+          <div class="arb__top face"> </div>
+          <div class="arb__bottom face"> </div>
+        </div>
+        <div class="blt">
+          <div class="blt__front face"> </div>
+          <div class="blt__back face"> </div>
+          <div class="blt__right face"> </div>
+          <div class="blt__left face"> </div>
+          <div class="blt__top face"> </div>
+          <div class="blt__bottom face"> </div>
+        </div>
+        <div class="blt2">
+          <div class="blt2__front face"> </div>
+          <div class="blt2__back face"> </div>
+          <div class="blt2__right face"> </div>
+          <div class="blt2__left face"> </div>
+          <div class="blt2__top face"> </div>
+          <div class="blt2__bottom face"> </div>
+        </div>
+        <div class="blb">
+          <div class="blb__front face"> </div>
+          <div class="blb__back face"> </div>
+          <div class="blb__right face"> </div>
+          <div class="blb__left face"> </div>
+          <div class="blb__top face"> </div>
+          <div class="blb__bottom face"> </div>
+        </div>
+        <div class="blb2">
+          <div class="blb2__front face"> </div>
+          <div class="blb2__back face"> </div>
+          <div class="blb2__right face"> </div>
+          <div class="blb2__left face"> </div>
+          <div class="blb2__top face"> </div>
+          <div class="blb2__bottom face"> </div>
+        </div>
+        <div class="puerta-c">
+          <div class="puerta">
+            <div class="puerta__front face"> </div>
+            <div class="puerta__back face"> </div>
+            <div class="puerta__right face"> </div>
+            <div class="puerta__left face"> </div>
+            <div class="puerta__top face"> </div>
+            <div class="puerta__bottom face"> </div>
+          </div>
+          <div class="puerta-l">
+            <div class="puerta-l__front face"> </div>
+            <div class="puerta-l__back face"> </div>
+            <div class="puerta-l__right face"> </div>
+            <div class="puerta-l__left face"> </div>
+            <div class="puerta-l__top face"> </div>
+            <div class="puerta-l__bottom face"> </div>
+          </div>
+          <div class="puerta-r">
+            <div class="puerta-r__front face"> </div>
+            <div class="puerta-r__back face"> </div>
+            <div class="puerta-r__right face"> </div>
+            <div class="puerta-r__left face"> </div>
+            <div class="puerta-r__top face"> </div>
+            <div class="puerta-r__bottom face"> </div>
+          </div>
+          <div class="puerta-t">
+            <div class="puerta-t__front face"> </div>
+            <div class="puerta-t__back face"> </div>
+            <div class="puerta-t__right face"> </div>
+            <div class="puerta-t__left face"> </div>
+            <div class="puerta-t__top face"> </div>
+            <div class="puerta-t__bottom face"> </div>
+          </div>
+        </div>
+        <div class="puerta_open">
+          <div class = "puerta B">
+            <div class="puerta__front face"></div>
+          </div>
+          <div class="puerta L">
+            <div class="puerta__front face"></div>
+          </div>
+          <div class="puerta R">
+            <div class="puerta__front face"></div>
+          </div>
+        </div>
+        <div class="librero U">
+          <div class="librero__front face"> </div>
+          <div class="librero__back face"> </div>
+          <div class="librero__right face"> </div>
+          <div class="librero__left face"> </div>
+          <div class="librero__top face"> </div>
+          <div class="librero__bottom face">    </div>
+        </div>
+        <div class="librero D">
+          <div class="librero__front face"> </div>
+          <div class="librero__back face"> </div>
+          <div class="librero__right face"> </div>
+          <div class="librero__left face"> </div>
+          <div class="librero__top face"> </div>
+          <div class="librero__bottom face">    </div>
+        </div>
+        <div class="librero__Side L">
+          <div class="librero__front face"> </div>
+          <div class="librero__back face"> </div>
+          <div class="librero__left face"> </div>
+          <div class="librero__top face"> </div>
+          <div class="librero__bottom face">    </div>
+        </div>
+        <div class="librero__Side R">
+          <div class="librero__front face"> </div>
+          <div class="librero__back face"> </div>
+          <div class="librero__left face"> </div>
+          <div class="librero__top face"> </div>
+          <div class="librero__bottom face">    </div>
+        </div>
+        <div class="fotos"> 
+          <div class="foto">
+            <div class="foto__front face"> </div>
+            <div class="foto__back face"> </div>
+            <div class="foto__right face"> </div>
+            <div class="foto__left face"> </div>
+            <div class="foto__top face"> </div>
+            <div class="foto__bottom face"> </div>
+          </div>
+          <div class="foto">
+            <div class="foto__front face"> </div>
+            <div class="foto__back face"> </div>
+            <div class="foto__right face"> </div>
+            <div class="foto__left face"> </div>
+            <div class="foto__top face"> </div>
+            <div class="foto__bottom face"> </div>
+          </div>
+        </div>
+        <div class="cajas"> 
+          <div class="caja">
+            <div class="caja__front face"> </div>
+            <div class="caja__back face"> </div>
+            <div class="caja__right face"> </div>
+            <div class="caja__left face"> </div>
+            <div class="caja__top face"> </div>
+            <div class="caja__bottom face"> </div>
+          </div>
+          <div class="caja">
+            <div class="caja__front face"> </div>
+            <div class="caja__back face"> </div>
+            <div class="caja__right face"> </div>
+            <div class="caja__left face"> </div>
+            <div class="caja__top face"> </div>
+            <div class="caja__bottom face"> </div>
+          </div>
+          <div class="caja">
+            <div class="caja__front face"> </div>
+            <div class="caja__back face"> </div>
+            <div class="caja__right face"> </div>
+            <div class="caja__left face"> </div>
+            <div class="caja__top face"> </div>
+            <div class="caja__bottom face"> </div>
+          </div>
+        </div>
+        <div class="tv">
+          <div class="tv__front face"> </div>
+          <div class="tv__back face"> </div>
+          <div class="tv__right face"> </div>
+          <div class="tv__left face"> </div>
+          <div class="tv__top face"> </div>
+          <div class="tv__bottom face"> </div>
+        </div>
+        <div class="repisa-t">
+          <div class="repisa-t__front face"> </div>
+          <div class="repisa-t__back face"> </div>
+          <div class="repisa-t__right face"> </div>
+          <div class="repisa-t__left face"> </div>
+          <div class="repisa-t__top face"> </div>
+          <div class="repisa-t__bottom face"> </div>
+        </div>
+        <div class="repisa-b">
+          <div class="repisa-b__front face"> </div>
+          <div class="repisa-b__back face"> </div>
+          <div class="repisa-b__right face"> </div>
+          <div class="repisa-b__left face"> </div>
+          <div class="repisa-b__top face"> </div>
+          <div class="repisa-b__bottom face"> </div>
+        </div>
+        <div class="bocina-l">
+          <div class="bocina-l__front face"> </div>
+          <div class="bocina-l__back face"> </div>
+          <div class="bocina-l__right face"> </div>
+          <div class="bocina-l__left face"> </div>
+          <div class="bocina-l__top face"> </div>
+          <div class="bocina-l__bottom face"> </div>
+        </div>
+        <div class="bocina-r">
+          <div class="bocina-r__front face"> </div>
+          <div class="bocina-r__back face"> </div>
+          <div class="bocina-r__right face"> </div>
+          <div class="bocina-r__left face"> </div>
+          <div class="bocina-r__top face"> </div>
+          <div class="bocina-r__bottom face"> </div>
+        </div>
+        <div class="muro">
+          <div class="muro__front face"> </div>
+          <div class="muro__back face"> </div>
+          <div class="muro__right face"> </div>
+          <div class="muro__left face"> </div>
+          <div class="muro__top face"> </div>
+          <div class="muro__bottom face"> </div>
+        </div>
+        <div class="sillon-c">
+          <div class="sillon-b">
+            <div class="sillon-b__front face"> </div>
+            <div class="sillon-b__back face"> </div>
+            <div class="sillon-b__right face"> </div>
+            <div class="sillon-b__left face"> </div>
+            <div class="sillon-b__top face"> </div>
+            <div class="sillon-b__bottom face"> </div>
+          </div>
+          <div class="sillon-t">
+            <div class="sillon-t__front face"> </div>
+            <div class="sillon-t__back face"> </div>
+            <div class="sillon-t__right face"> </div>
+            <div class="sillon-t__left face"> </div>
+            <div class="sillon-t__top face"> </div>
+            <div class="sillon-t__bottom face"> </div>
+          </div>
+          <div class="sillon-l">
+            <div class="sillon-l__front face"> </div>
+            <div class="sillon-l__back face"> </div>
+            <div class="sillon-l__right face"> </div>
+            <div class="sillon-l__left face"> </div>
+            <div class="sillon-l__top face"> </div>
+            <div class="sillon-l__bottom face"> </div>
+          </div>
+          <div class="sillon-r">
+            <div class="sillon-r__front face"> </div>
+            <div class="sillon-r__back face"> </div>
+            <div class="sillon-r__right face"> </div>
+            <div class="sillon-r__left face"> </div>
+            <div class="sillon-r__top face"> </div>
+            <div class="sillon-r__bottom face"> </div>
+          </div>
+        </div>
+        <div class="mesa-c">
+          <div class="mesa">
+            <div class="mesa__front face"> </div>
+            <div class="mesa__back face"> </div>
+            <div class="mesa__right face"> </div>
+            <div class="mesa__left face"> </div>
+            <div class="mesa__top face"> </div>
+            <div class="mesa__bottom face"> </div>
+          </div>
+          <div class="mesa-p">
+            <div class="mesa-p__front face"> </div>
+            <div class="mesa-p__back face"> </div>
+            <div class="mesa-p__right face"> </div>
+            <div class="mesa-p__left face"> </div>
+            <div class="mesa-p__top face"> </div>
+            <div class="mesa-p__bottom face"> </div>
+          </div>
+          <div class="mesa-p">
+            <div class="mesa-p__front face"> </div>
+            <div class="mesa-p__back face"> </div>
+            <div class="mesa-p__right face"> </div>
+            <div class="mesa-p__left face"> </div>
+            <div class="mesa-p__top face"> </div>
+            <div class="mesa-p__bottom face"> </div>
+          </div>
+          <div class="mesa-p">
+            <div class="mesa-p__front face"> </div>
+            <div class="mesa-p__back face"> </div>
+            <div class="mesa-p__right face"> </div>
+            <div class="mesa-p__left face"> </div>
+            <div class="mesa-p__top face"> </div>
+            <div class="mesa-p__bottom face"> </div>
+          </div>
+          <div class="mesa-p">
+            <div class="mesa-p__front face"> </div>
+            <div class="mesa-p__back face"> </div>
+            <div class="mesa-p__right face"> </div>
+            <div class="mesa-p__left face"> </div>
+            <div class="mesa-p__top face"> </div>
+            <div class="mesa-p__bottom face"> </div>
+          </div>
+          <div class="mesa-shadow"></div>
+        </div>
+        <div class="tablet">
+          <div class="tablet__front face"> </div>
+          <div class="tablet__back face"> </div>
+          <div class="tablet__right face"> </div>
+          <div class="tablet__left face"> </div>
+          <div class="tablet__top face"> </div>
+          <div class="tablet__bottom face">    </div>
+        </div>
+      </div>
+      <div class="stats">
         <h3>TODAY CODY</h3>
-        <div class="clothBunrew">
-            <ul>
-                <li class="manCloth on">남성옷</li>
-                <li class="girlCloth">여성옷</li>
-            </ul>
-        </div>
-
-        <div class="man_slide on">
-            <ul class="slide_group">
-                <li class="slide slide1">
-                    <div class="text"></div>
-                    <div class="clothes">
-                        <div class="introimg1 introimg"></div>
-                    </div>
-                </li>
-                <li class="slide slide2">
-                    <div class="text"></div>
-                    <div class="clothes">
-                        <div class="introimg2 introimg"></div>
-                    </div>
-                </li>
-                <li class="slide slide3">
-                    <div class="text"></div>
-                    <div class="clothes">
-                        <div class="introimg3 introimg"></div>
-                    </div>
-                </li>
-                <li class="slide slide4">
-                    <div class="text"></div>
-                    <div class="clothes">
-                        <div class="introimg4 introimg"></div>
-                    </div>
-                </li>
-                <li class="slide slide5">
-                    <div class="text"></div>
-                    <div class="clothes">
-                        <div class="introimg5 introimg"></div>
-                    </div>
-                </li>
-                <li class="slide slide6">
-                    <div class="text"></div>
-                    <div class="clothes">
-                        <div class="introimg6 introimg"></div>
-                    </div>
-                </li>
-                <li class="slide slide7">
-                    <div class="text"></div>
-                    <div class="clothes">
-                        <div class="introimg7 introimg"></div>
-                    </div>
-                </li>
-                <li class="slide slide8">
-                    <div class="text"></div>
-                    <div class="clothes">
-                        <div class="introimg8 introimg"></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
+        <ul>
+            <li>
+                <div class="text">반팔</div>
+                <div class="clothes">
+                    <img src="./img/clothes/tshirt.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="text">셔츠</div>
+                <div class="clothes">
+                    <img src="./img/clothes/shirt.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="text">블라우스</div>
+                <div class="clothes">
+                    <img src="./img/clothes/outfit.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="text">모자</div>
+                <div class="clothes">
+                    <img src="./img/clothes/pamela-hat.png" alt="">
+                </div>
+            </li>
+        </ul>
     </div>
+    <!-- <div class="info">
+      <img src="./img/text.png" alt="">
+    </div> -->
 
-    <script type="module">
-
-
-
-        $(".introimg1").css("background-image", "url(./img/clothes/9.gif)");
-        $(".introimg2").css("background-image", "url(./img/clothes/3.gif)");
-        $(".introimg3").css("background-image", "url(./img/clothes/4.gif)");
-        $(".introimg4").css("background-image", "url(./img/clothes/5.gif)");
-        $(".introimg5").css("background-image", "url(./img/clothes/6.gif)");
-        $(".introimg6").css("background-image", "url(./img/clothes/7.gif)");
-        $(".introimg7").css("background-image", "url(./img/clothes/1.gif)");
-        $(".introimg8").css("background-image", "url(./img/clothes/5.gif)");
-
-
-        //  클릭시 의상
-        $('.clothBunrew ul li.manCloth').on('click', function () {
-            $(this).addClass('on').siblings().removeClass('on');
-            $('.man_slide').addClass('on');
-            $('.girl_slide').removeClass('on')
-
-            $(".introimg1").css("background-image", "url(./img/clothes/9.gif)");
-            $(".introimg2").css("background-image", "url(./img/clothes/3.gif)");
-            $(".introimg3").css("background-image", "url(./img/clothes/4.gif)");
-            $(".introimg4").css("background-image", "url(./img/clothes/5.gif)");
-            $(".introimg5").css("background-image", "url(./img/clothes/6.gif)");
-            $(".introimg6").css("background-image", "url(./img/clothes/7.gif)");
-            $(".introimg7").css("background-image", "url(./img/clothes/1.gif)");
-            $(".introimg8").css("background-image", "url(./img/clothes/5.gif)");
-
-        })
-
-
-        $('.clothBunrew ul li.girlCloth').on('click', function () {
-            $(this).addClass('on').siblings().removeClass('on');
-            $('.girl_slide').addClass('on');
-            $('.man_slide').removeClass('on')
-
-            $(".introimg1").css("background-image", "url(./img/clothes/14.gif)");
-            $(".introimg2").css("background-image", "url(./img/clothes/15.gif)");
-            $(".introimg3").css("background-image", "url(./img/clothes/16.gif)");
-            $(".introimg4").css("background-image", "url(./img/clothes/17.gif)");
-            $(".introimg5").css("background-image", "url(./img/clothes/18.gif)");
-            $(".introimg6").css("background-image", "url(./img/clothes/19.gif)");
-            $(".introimg7").css("background-image", "url(./img/clothes/20.gif)");
-            $(".introimg8").css("background-image", "url(./img/clothes/21.gif)");
-        })
-
-
-    </script>
-    <script type="module" src="./js/clothPath.js"></script>
 </body>
-
 </html>

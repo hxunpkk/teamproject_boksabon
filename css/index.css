@@ -69,20 +69,11 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
 .td { display: table-cell; vertical-align: middle; } 
 .search_btn { padding: 0; margin: 0; color: #fff; font-family: Nunito; border: none; background-color: transparent; } 
 .search_btn { display: block; position: relative; width: 60px; height: 79px; cursor: pointer; } 
-.search_btn span { display: block; position: absolute; top: 68px; left: 43px; width: 45px; height: 15px; border-radius: 10px; background-color: transparent; transform: rotateZ(52deg); transition: 0.5s ease all; } 
-.search_btn span:before,
-.search_btn span:after { content: ""; position: absolute; right: 0; bottom: 0; width: 45px; height: 15px; border-radius: 10px; background-color: #fff; transform: rotateZ(0); transition: 0.5s ease all; } 
+.search_btn i { display: block; position: absolute; right:0; top:10px; font-size:40px;} 
 
 #cover { display: none; position: absolute; top: 62%; right: -2%; left: 0; width: 550px; padding: 35px; margin: -83px auto 0 auto; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 10px 40px #b0c4de, 0 0 0 20px #ffffffeb; transform: scale(0.6); } 
-#s-circle { position: relative; top: -6px; left: 0; width: 69px; height: 79px; border: 15px solid #fff; border-radius: 50%; margin-top: 0; border-width: 15px; background-color: transparent; transition: 0.5s ease all; } 
 #cover.on { top:10%; } 
 #s-cover { width: 1px; padding-left: 35px; } 
-#s-cover:hover #s-circle { top: -1px; width: 67px; height: 15px; border-radius: 20px; border-width: 0; background-color: #fff; } 
-#s-cover:hover span { top: 50%; left: 56px; width: 25px; margin-top: -9px; transform: rotateZ(0); } 
-#s-cover:hover button span:before { bottom: 11px; transform: rotateZ(52deg); } 
-#s-cover:hover button span:after { bottom: -11px; transform: rotateZ(-52deg); } 
-#s-cover:hover button span:before,
-#s-cover:hover button span:after { right: -6px; width: 40px; background-color: #fff; } 
 
 .text_box { position: absolute; top: 28%; left: 8%; color: #fff; font-size: 3rem; text-align: center; } 
 .text_box.on { display: none; } 

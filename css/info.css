@@ -1,0 +1,12 @@
+.info {
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    right: 31%;
+    bottom: 65%;
+    transition: all 0.5s;
+}
+
+.info img {
+    width: 100%;
+}

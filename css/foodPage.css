@@ -56,16 +56,17 @@ body {
 
 .foodList li > div {
     transition: all 0.5s;
-    padding: 10px;
+    padding: 20px 30px;
 }
 
 .foodList li > div:hover {
     transform: rotateY(180deg);
-    color:orangered;
+    color: skyblue;
 }
 
-.foodList li > div > i {
-    font-size: 60px;
+.foodList li > div > img {
+    height: 110px;
+    width: 100px;
     padding-bottom: 15px;
 }
 
@@ -75,54 +76,12 @@ body {
 }
 
 .foodList li > div:hover > p {
-    text-indent: -99999px;
-}
-
-.foodList li > div:hover > p::after {
     transform: rotateY(180deg);
-    text-indent: 0px;
-    float: left;
-    /* text-align: center; */
 }
 
-.foodList li:nth-child(1) > div:hover > p::after {
-    content: "한　식";
-}
-
-.foodList li:nth-child(2) > div:hover > p::after {
-    content: "햄버거";
-}
-
-.foodList li:nth-child(3) > div:hover > p::after {
-    content: "해산물";
-}
-
-.foodList li:nth-child(4) > div:hover > p::after {
-    content: "카　페";
-}
-
-.foodList li:nth-child(5) > div:hover > p::after {
-    content: "맛　집";
-}
-
-.foodList li:nth-child(6) > div:hover > p::after {
-    content: "양　식";
-}
-
-.foodList li:nth-child(7) > div:hover > p::after {
-    content: "피　자";
-}
-
-.foodList li:nth-child(8) > div:hover > p::after {
-    content: "제과점";
-}
-
-.foodList li:nth-child(9) > div:hover > p::after {
-    content: "샐러드";
-}
-
-.foodList.on li > div > i {
-    font-size: 30px;
+.foodList.on li > div > img {
+    height: 70px;
+    width: 60px;
 }
 
 .foodList.on li > div > p {

@@ -34,9 +34,12 @@
  .Modal_page { top:19%; } 
  .modal .imgbox button { position: absolute; bottom: 0; /* top: 0; */
  left: 50%; padding: 5px 10px; color: #fff; background: #000; transform: translateX(-50%); width:30%; } 
- .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet { display: none; } 
  }
- @media screen and (max-height:500px){
+ @media screen and (max-height:700px){
  .slide_span { display: none; } 
  .swiper-container { height:100px; } 
+ #cover { display: none; position: absolute; top: 62%; /* right: 0; */
+  left: 50%; transform: translateX(-50%); width: 208px; padding: 10px; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 0px 0px #b0c4de, 0 0 0 4px #ffffffeb; } 
+  #cover.on { top: 20%; } 
+
  }

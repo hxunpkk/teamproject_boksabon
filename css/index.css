@@ -58,7 +58,7 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
  }
 @keyframes leftright { 
  0% { transform:translateX(0); } 
-100% { transform:translateX(1500px); } 
+100% { transform:translateX(2000px); } 
  }
 
 .tb { display: table; width: 100%; } 
@@ -67,7 +67,7 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
 .search_btn { display: block; position: relative; width: 60px; height: 79px; cursor: pointer; } 
 .search_btn i { display: block; position: absolute; right:0; top:10px; font-size:40px;} 
 
-#cover { display: none; position: absolute; top: 62%; right: -2%; left: 0; width: 550px; padding: 35px; margin: -83px auto 0 auto; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 10px 40px #b0c4de, 0 0 0 20px #ffffffeb; transform: scale(0.6); } 
+#cover { display: none; position: absolute; top: 60%; left:44%; transform: scale(0.6) translateX(-50%); width: 550px; padding: 35px; margin: -83px auto 0 auto; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 10px 40px #b0c4de, 0 0 0 20px #ffffffeb; } 
 #cover.on { top:10%; } 
 #s-cover { width: 1px; padding-left: 35px; } 
 

@@ -20,9 +20,6 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
 .CITY_description > div { display: inline-block; } 
 .CITY_description .current_temp { font-size: 100px; } 
 .CITY_description .city { font-size: 50px; } 
-/* .articleM { transform: translateY(-1000%); } 
-.articleM.on { transform: translateY(0%); } 
- */
  .articleModal.on { position: relative; bottom: 0; width: 100%; height: 50%; color: #fff; transform: translateY(100%); } 
  .articleModal { transform: translateY(1000%); transition: all .8s; } 
 .articleModal ul { display: flex; padding: 0; z-index: 1500; justify-content: center; } 
@@ -31,8 +28,6 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
 #data1 { position: relative; width: 60%; height: auto; height: 40px; padding: 0 0.5em; color:#fff; border: 1px soild #fff; border-radius: 5px; background: none; outline: none; padding: 0; margin: 0; border: none; background-color: transparent; } 
 #data1[type="text"] { width: 100%; height: 56px; font-size: 40px; border:none; line-height: 2; } 
 #data1[type="text"]::placeholder { color: #fff; } 
-/* 
-.search_form i { transform: translateY(1px); } */
 
 /* 날씨 알려주는 드론 */
 [class*="drone"] img { width:100%; } 
@@ -44,6 +39,7 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
 .upndown { animation:upndown 1s infinite linear alternate; /* animation:upndown 2s infinite linear alternate; */ } 
 .leftright { position:relative; animation:leftright 20s infinite linear; } 
 .leftright .dronimg { position: absolute; width: 240px !important; padding: 31px 0 28px; text-align: center; font-size: 16px; top: -28px; left: -255px; background: url(../img/weather_banner.gif) no-repeat; transition: all .4s; overflow: hidden; } 
+.leftright:hover { animation-play-state: paused;}
 .drone-side:hover .dronimg {    padding: 32px 0 -16px;
     overflow: hidden;
     border-radius: 10px;} 

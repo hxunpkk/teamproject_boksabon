@@ -31,12 +31,12 @@ body::-webkit-scrollbar {
 
 .imt {
 	position: absolute;
-	left: -3%;
+	left: 10%;
 	top: 10%;
 	max-width: 100%;
 }
 .imt img {
-	width: 45%;
+	width: 80%;
 }
 
 .chart-container {

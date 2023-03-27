@@ -12,8 +12,8 @@
  #data1 { color:#000; } 
  .back_home { position:fixed; top: 5%; right:5%; width:40px; height:40px; z-index: 999999999999999999; } 
 
- #cover { display: none; position: absolute; top: 62%; /* right: 0; */
- left: 50%; transform: translateX(-50%); width: 288px; padding: 20px; margin: -83px auto 0 auto; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 10px 40px #b0c4de, 0 0 0 20px #ffffffeb; } 
+ #cover { display: none; position: absolute; top: 62%;
+ left: 50% !important; transform: translateX(-50%); width: 288px; padding: 20px; margin: -83px auto 0 auto; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 10px 40px #b0c4de, 0 0 0 20px #ffffffeb; } 
 #cover.on { top: 16%; } 
 #data1[type="text"] { width: 100%; height: 36px; font-size: 20px; border: none; line-height: 2; color: #fff; } 
 .textAni { font-size:20px; } 
@@ -21,6 +21,11 @@
 .search_form { height: 27px; z-index: 100; } 
 .search_btn { display: block; position: relative; width: 40px; height: 40px; cursor: pointer; } 
 .search_btn i { display: block; position: absolute; right:0; top:5px; font-size:30px; } 
+.leftright { position:relative; animation:leftright2 20s infinite linear; } 
+@keyframes leftright2 { 
+ 0% { transform:translateX(0); } 
+100% { transform:translateX(1240px); } 
+ }
 }
  @media screen and (max-width:500px){
  .weather { position:absolute; left:50%; transform: translate(-50%); bottom:0; width:100%; height: 45%; padding:30px 50px 0; color:#fff; } 
@@ -34,8 +39,8 @@
  .Modal_page { top:19%; } 
  .modal .imgbox button { position: absolute; bottom: 0; /* top: 0; */
  left: 50%; padding: 5px 10px; color: #fff; background: #000; transform: translateX(-50%); width:30%; } 
- .leftright { position:relative; animation:leftright 10s infinite linear; } 
- @keyframes leftright { 
+ .leftright { position:relative; animation:leftright3 10s infinite linear; } 
+ @keyframes leftright3 { 
   0% { transform:translateX(0); } 
  100% { transform:translateX(700px); } 
   }

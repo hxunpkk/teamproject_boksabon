@@ -11,44 +11,65 @@
 }
 #section #map {
   flex: 1;
-  background-image: url(../img/지도70\ [Converted].svg);
+  background-image: url(../img/map.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   position: relative;
 }
-#section #map button {
-  position: fixed;
-  border: none;
-  padding: 5px;
+#section #map .outTitle {
+  opacity: 0;
+  font-size: 35px;
+  font-weight: bold;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  transition: all 0.3s;
 }
-#section #map button.on {
-  background: red;
+#section #map .outTitle.off {
+  opacity: 0;
+}
+#section #map .btnBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#section #map .btnBox button {
+  position: absolute;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#section #map .btnBox button.on {
+  background: orange;
   color: #fff;
 }
-#section #map #seoul {
-  top: 23%;
-  left: 20%;
+#section #map .btnBox #seoul {
+  top: 22%;
+  right: 55%;
 }
-#section #map #busan {
+#section #map .btnBox #busan {
   top: 55%;
-  left: 32%;
+  left: 61%;
 }
-#section #map #gangwon {
-  top: 20%;
-  left: 30%;
+#section #map .btnBox #gangwon {
+  top: 18%;
+  left: 58%;
 }
-#section #map #daejeon {
+#section #map .btnBox #daejeon {
   top: 40%;
-  left: 20%;
+  right: 50%;
 }
-#section #map #gwangju {
+#section #map .btnBox #gwangju {
   top: 60%;
-  left: 18%;
+  right: 58%;
 }
-#section #map #jeju {
-  top: 80%;
-  left: 15%;
+#section #map .btnBox #jeju {
+  top: 82%;
+  right: 62%;
 }
 #section #contBox {
   align-items: center;
@@ -59,6 +80,35 @@
   display: flex;
   flex-direction: column;
 }
+#section #contBox.close {
+  opacity: 0;
+}
+#section #contBox .inTitle {
+  font-size: 30px;
+  padding-top: 50px;
+}
+#section #contBox .inTitle span {
+  background: orange;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#section #contBox #close {
+  flex: 1 1 1;
+  padding: 5px;
+  font-size: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  display: none;
+  opacity: 0.7;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+#section #contBox #close:hover {
+  opacity: 1;
+}
 #section #contBox .imgBox {
   display: flex;
   flex-wrap: wrap;
@@ -66,25 +116,40 @@
   height: 80%;
   margin: auto;
   background: #fff;
-  padding: 3%;
+  padding: 3px;
 }
 #section #contBox .imgBox .img {
   flex: 1 1 35%;
-  display: none;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 5px solid #fff;
+  display: flex;
 }
 #section #contBox .imgBox .img p {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
-  opacity: 0;
   transition: all 0.3s;
   display: none;
+  font-size: 15px;
+  padding-top: 5%;
+  transform: translate(0, 80%);
+  line-height: 15px;
+  margin-top: auto;
+}
+#section #contBox .imgBox .img p span {
+  font-size: 20px;
+}
+#section #contBox .imgBox .img p i {
+  font-size: 60px;
+  padding: 10% 0 10% 0;
 }
 #section #contBox .imgBox .img.img:hover p {
-  opacity: 1;
+  transform: translate(0, 0);
 }
 #section #contBox.spring.seoul .img, #section #contBox.spring.seoul .seoul.spring {
   display: block;

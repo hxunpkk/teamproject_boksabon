@@ -42,20 +42,22 @@
 	</div>
 	<iframe src="./클론코딩/intro.html" class="introClone">
 	</iframe>
-	<div id="cover">
-		<form method="get" class="search_form" onsubmit="return false">
-			<div class="tb">
-				<div class="text_box">
-					<span class="text"></span><span class="textAni">|</span>
+	<div class="cover_bg">
+		<div id="cover">
+			<form method="get" class="search_form" onsubmit="return false">
+				<div class="tb">
+					<div class="text_box">
+						<span class="text"></span><span class="textAni">|</span>
+					</div>
+					<input type="text" Id="data1">
+					<div class="td" id="s-cover">
+						<button type="submit" value="send" class="search_btn">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</div>
 				</div>
-				<input type="text" Id="data1">
-				<div class="td" id="s-cover">
-					<button type="submit" value="send" class="search_btn">
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</button>
-				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	</div>
 	<div class="back_form">
 
@@ -74,7 +76,7 @@
 				<div class="fan02"><img src="./img/fan-side.png" class="rotate-side"></div>
 				<img src="./img/body-side.png">
 				<div class="dronimg">
-					
+
 				</div>
 				<!-- 				<img src="./img/weather_banner.gif" class="weather_banner">
  -->
@@ -147,12 +149,12 @@
 					// 입력한 한글 지역이름
 					koreaAreaName = ddArrctBc[0].kor;
 
-					
-					
+
+
 					// 날씨 데이터 담은 변수들
-					var $weather_description = "&nbsp;&nbsp;&nbsp;&nbsp;" +  resp.weather[0].description;
+					var $weather_description = "&nbsp;&nbsp;&nbsp;&nbsp;" + resp.weather[0].description;
 					var $Temp = Math.floor(resp.main.temp) + "º";
-					var $humidity = "&nbsp;&nbsp;&nbsp;&nbsp;" +  resp.main.humidity + " %";
+					var $humidity = "&nbsp;&nbsp;&nbsp;&nbsp;" + resp.main.humidity + " %";
 					var $wind = "&nbsp;&nbsp;&nbsp;&nbsp;" + resp.wind.speed + " m/s";
 					var $city = koreaAreaName;
 					var $cloud = "&nbsp;&nbsp;&nbsp;&nbsp;" + resp.clouds.all + "%";
@@ -160,16 +162,16 @@
 					var $temp_max =
 						"&nbsp;&nbsp;&nbsp;&nbsp;" + Math.floor(resp.main.temp_max) + "º";
 					var $wiconUrl = '<img class="weatherIcon" src="http://openweathermap.org/img/wn/' + resp.weather[0].icon + '.png" alt="'
-					+ resp.weather[0].description + '">';
+						+ resp.weather[0].description + '">';
 
 					let $wicon = '';
 
-					if(resp.weather[0].description == '맑음'){
-						 $wicon = '⛅'
-					}else {
-						$wicon =  $wiconUrl;
+					if (resp.weather[0].description == '맑음') {
+						$wicon = '⛅'
+					} else {
+						$wicon = $wiconUrl;
 					}
-					
+
 
 
 
@@ -179,9 +181,9 @@
 					$('.dronWeather').remove();
 					// 드론에 날씨 데이터 넣기
 					let dronData = `<div class="dronWeather">`;
-						dronData += "&nbsp;&nbsp;&nbsp;&nbsp;" + koreaAreaName + " 날씨를 알려줄게요 " +  $wicon ;
-						dronData +=  `<span class="dronData">`;
-						dronData +=  `<br>
+					dronData += "&nbsp;&nbsp;&nbsp;&nbsp;" + koreaAreaName + " 날씨를 알려줄게요 " + $wicon;
+					dronData += `<span class="dronData">`;
+					dronData += `<br>
 						<div class="dron_text">날씨 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${$weather_description}</div>
 						<div class="dron_text">강수량&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${$humidity}</div> 
 						<div class="dron_text">바람 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${$wind}</div>
@@ -190,8 +192,8 @@
 						<br><br>
 						
 						`;
-						dronData += `</span>`;
-						dronData += `</div>`;
+					dronData += `</span>`;
+					dronData += `</div>`;
 					$(".dronimg").prepend(dronData);
 
 					//날씨 한단어로 설명 ex)맑음

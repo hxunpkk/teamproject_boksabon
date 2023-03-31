@@ -66,16 +66,25 @@ import dataArr from "./EnglishName.js";
         $('.home_btn3').css('z-index', '0')
     })
     // ajax에서 보낸 값(한글)을 영어로 바꿔주는 폼
-    $('form').on('submit', function () {
-        // inputDataVal = $('#data1').val('서울');
-        var inputDataVal = $('#data1').val();
-        let ddArrct = dataArr.filter((value) => {
-            return value.kor === inputDataVal
-        })
+    weatherApi("Seoul,KR");
+		let inputDataVal = ''
+		let ddArrct = ''
+		$("form").on("submit", function () {
+			// inputDataVal = $('#data1').val('서울');
 
-        weatherApi(ddArrct[0].eng);
-        return false
-    })
-    weatherApi('Seoul,KR')
+			inputDataVal = $("#data1").val();
+			ddArrct = dataArr.filter((value) => {
+				return value.kor === inputDataVal;
+			});
+			if(inputDataVal === '') {
+				weatherApi("Seoul,KR");
+			}else{
+				
+				weatherApi(ddArrct[0].eng);
+			}
+			
+			return false;
+		});
+		
 
 })(jQuery);

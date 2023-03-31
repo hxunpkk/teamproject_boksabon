@@ -18,7 +18,6 @@
         } else if (12<=month || month<=2) {
             season = 'winter'
         }
-        console.log(season)
         // console.log(local)
 
 
@@ -104,21 +103,11 @@
         const centerY = top - height / 2
         const d = Math.sqrt(centerX**2 + centerY**2)
 
-        // card.style.boxShadow = `
-        //   ${-centerX / 5}px ${-centerY / 10}px 10px rgba(0, 0, 0, 0.2)
-        // `
-
         card.style.transform = `
           rotate3d(
             ${-centerY / 100}, ${centerX / 100}, 0, ${d / 8}deg
           )
         `
-
-        // light.style.backgroundImage = `
-        //   radial-gradient(
-        //     circle at ${left}px ${top}px, #00000040, #ffffff00, #ffffff99
-        //   )
-        // `
       }
 
       frame.addEventListener('mouseenter', () => {
@@ -132,13 +121,6 @@
         light.style.backgroundImage = ''
       })
 
-      window.addEventListener('resize', () => {
-        rect = frame.getBoundingClientRect()
-        x = rect.x
-        y = rect.y
-        width = rect.width
-        height = rect.height
-      })
         
 })(jQuery)
 

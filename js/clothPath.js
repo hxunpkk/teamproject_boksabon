@@ -19,7 +19,7 @@ import dataArr from "./EnglishName.js";
 
     let weathersuchi = "";
 
-    const weatherApi = (area) => {
+/*     const weatherApi = (area) => {
         $.ajax({
             url: "http://api.openweathermap.org/data/2.5/weather?country=KR&name=Republic of Korea&id=1835841&state=&lang=KR&appid=d5948ec3ace590812f0049bbdb822c43&units=metric",
             dataType: "json",
@@ -53,7 +53,7 @@ import dataArr from "./EnglishName.js";
         })
     }
 
-
+ */
 
     $('.box.sect1').on('click', function () {
 /*         $('.back_form').css('background', 'rgba(0, 0, 0, 0.5)')
@@ -93,7 +93,7 @@ import dataArr from "./EnglishName.js";
     })
 
     // ajax에서 보낸 값(한글)을 영어로 바꿔주는 폼
-    $('form').on('submit', function () {
+    /* $('form').on('submit', function () {
         // inputDataVal = $('#data1').val('서울');
         var inputDataVal = $('#data1').val();
         let ddArrct = dataArr.filter((value) => {
@@ -103,5 +103,5 @@ import dataArr from "./EnglishName.js";
         weatherApi(ddArrct[0].eng);
         return false
     })
-    weatherApi('Seoul,KR')
+    weatherApi('Seoul,KR') */
 })(jQuery);

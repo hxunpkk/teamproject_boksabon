@@ -201,86 +201,7 @@ import dataArr from "./EnglishName.js";
             $('.threeModal').css('opacity', '1')
             $('.threeModal').css('z-index', '999999')
             $('.fourModal').css('opacity', '0')
-            /*             $('body').append(`<div class="modal3"></div>`)
-                        $('.modal3').prepend(`<div class="imgbox threeModal"></div>`)
-                        $('.imgbox').prepend(`<a></a>`)
-                        $('.imgbox a').after(`<button type="button" class="button">닫기</button>`)
             
-                        $('.threeModal').prepend(`
-                        <iframe name="ifrm2" id="iframe2" src="/travel.html" style="width:100%; height:100%;"></iframe>`)
-                        const runframe = document.getElementById('iframe2');
-            
-                        if (koreaAreaNameValue == 'seoul' || koreaAreaNameValue == 'incheon' || koreaAreaNameValue == 'yongin'
-                            || koreaAreaNameValue == 'yeoju' || koreaAreaNameValue == 'yangju' || koreaAreaNameValue == 'uiwang'
-                            || koreaAreaNameValue == 'uijeongbu-si' || koreaAreaNameValue == 'suwon' || koreaAreaNameValue == 'anyang-si'
-                            || koreaAreaNameValue == 'ansan' || koreaAreaNameValue == 'anseong' || koreaAreaNameValue == 'dongducheon-si'
-                            || koreaAreaNameValue == 'gimpo-si' || koreaAreaNameValue == 'goyang' || koreaAreaNameValue == 'gunpo'
-                            || koreaAreaNameValue == 'siheung-si' || koreaAreaNameValue == 'seongnam' || koreaAreaNameValue == 'pyeongtaek'
-                            || koreaAreaNameValue == 'pocheon-si' || koreaAreaNameValue == 'paju' || koreaAreaNameValue == 'osan'
-                            || koreaAreaNameValue == 'namyangju' || koreaAreaNameValue == 'icheon-si' || koreaAreaNameValue == 'hwaseong'
-                            || koreaAreaNameValue == 'hanam' || koreaAreaNameValue == 'gwangmyeong-si' || koreaAreaNameValue == 'gwacheon'
-                            || koreaAreaNameValue == 'guri-si') {
-                            let seoulVal = "seoul"
-                            runframe.addEventListener('load', function () {
-                                this.contentDocument.querySelector('button').classList.remove()
-                                this.contentDocument.querySelector('button#' + `${seoulVal}`).classList.add('on');
-                                this.contentDocument.getElementById('contBox').classList.add(`${seoulVal}`);
-                            })
-                        }
-                        if (koreaAreaNameValue == 'gwangju' || koreaAreaNameValue == 'yeosu' || koreaAreaNameValue == 'iksan'
-                            || koreaAreaNameValue == 'gimje' || koreaAreaNameValue == 'suncheon' || koreaAreaNameValue == 'mokpo'
-                            || koreaAreaNameValue == 'namwon' || koreaAreaNameValue == 'jeonju' || koreaAreaNameValue == 'gwangyang'
-                            || koreaAreaNameValue == 'gunsan') {
-                            let areaVal = "gwangju"
-                            runframe.addEventListener('load', function () {
-                                this.contentDocument.querySelector('button').classList.remove()
-                                this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
-                                this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
-                            })
-                        }
-                        if (koreaAreaNameValue == 'busan' || koreaAreaNameValue == 'yeongju' || koreaAreaNameValue == 'yangsan'
-                            || koreaAreaNameValue == 'daegu' || koreaAreaNameValue == 'ulsan' || koreaAreaNameValue == 'andong'
-                            || koreaAreaNameValue == 'changwon' || koreaAreaNameValue == 'gumi' || koreaAreaNameValue == 'himhae'
-                            || koreaAreaNameValue == 'gimcheon' || koreaAreaNameValue == 'sangju' || koreaAreaNameValue == 'sacheon'
-                            || koreaAreaNameValue == 'pohang' || koreaAreaNameValue == 'mungyeong' || koreaAreaNameValue == 'miryang'
-                            || koreaAreaNameValue == 'jinju' || koreaAreaNameValue == 'gyeongsan' || koreaAreaNameValue == 'hyeongju') {
-                            let areaVal = "busan"
-                            runframe.addEventListener('load', function () {
-                                this.contentDocument.querySelector('button').classList.remove()
-                                this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
-                                this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
-                            })
-                        }
-                        if (koreaAreaNameValue == 'jeju') {
-                            let areaVal = "jeju"
-                            runframe.addEventListener('load', function () {
-                                this.contentDocument.querySelector('button').classList.remove()
-                                this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
-                                this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
-                            })
-                        }
-                        if (koreaAreaNameValue == 'wonju' || koreaAreaNameValue == 'taebaek' || koreaAreaNameValue == 'chuncheon'
-                            || koreaAreaNameValue == 'gangneung' || koreaAreaNameValue == 'sokcho' || koreaAreaNameValue == 'sancheok') {
-                            let areaVal = "gangwon"
-                            runframe.addEventListener('load', function () {
-                                this.contentDocument.querySelector('button').classList.remove()
-                                this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
-                                this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
-                            })
-                        }
-                        if (koreaAreaNameValue == 'daejeon' || koreaAreaNameValue == 'asan' || koreaAreaNameValue == 'sejong'
-                            || koreaAreaNameValue == 'cheongju' || koreaAreaNameValue == 'chungju' || koreaAreaNameValue == 'boryeong'
-                            || koreaAreaNameValue == 'gongju' || koreaAreaNameValue == 'seosan' || koreaAreaNameValue == 'nonsan'
-                            || koreaAreaNameValue == 'jecheon' || koreaAreaNameValue == 'gyeryong-si') {
-                            let areaVal = "daejeon"
-                            runframe.addEventListener('load', function () {
-                                this.contentDocument.querySelector('button').classList.remove()
-                                this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
-                                this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
-                            })
-                        }
-             */
-            // 넘어온 지역을 근교 별로 전환
             return false
 
         })
@@ -297,21 +218,26 @@ import dataArr from "./EnglishName.js";
 
         })
 
-        let stoday = new Date()
+        weatherApi("Seoul,KR");
+		let inputDataVal = ''
+		let ddArrct = ''
+		$("form").on("submit", function () {
+			// inputDataVal = $('#data1').val('서울');
 
-        var inputDataVal = "";
-        $('form').on('submit', function () {
-            // inputDataVal = $('#data1').val('서울');
-            inputDataVal = $('#data1').val();
-            let ddArrct = dataArr.filter((value) => {
-                return value.kor === inputDataVal
-            })
-            weatherApi(ddArrct[0].eng);
-
-            return false
-        })
-        /* weatherApi("") */
-        weatherApi('Seoul,KR')
+			inputDataVal = $("#data1").val();
+			ddArrct = dataArr.filter((value) => {
+				return value.kor === inputDataVal;
+			});
+			if(inputDataVal === '') {
+				weatherApi("Seoul,KR");
+			}else{
+				
+				weatherApi(ddArrct[0].eng);
+			}
+			
+			return false;
+		});
+		
 
     }
 

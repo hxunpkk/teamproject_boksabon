@@ -49,7 +49,7 @@
 					<div class="text_box">
 						<span class="text"></span><span class="textAni">|</span>
 					</div>
-					<input type="text" Id="data1">
+					<input type="text" Id="data1" value="">
 					<div class="td" id="s-cover">
 						<button type="submit" value="send" class="search_btn">
 							<i class="fa-solid fa-magnifying-glass"></i>
@@ -118,13 +118,6 @@
 			</div>
 		</article>
 	</div>
-	<script type="text/javascript">
-		$(".searchbtn").click(function () {
-			$(this).toggleClass("bg-green");
-			$(".fas").toggleClass("color-white");
-			$(".input").focus().toggleClass("active-width").val("");
-		});
-	</script>
 	<script type="module">
 		import dataArr from "./js/EnglishName.js";
 		let koreaAreaName = "";
@@ -273,32 +266,27 @@
 		$(".fourModal").css("opacity", "0");
 
 		// ajax에서 보낸 값(한글)을 영어로 바꿔주는 폼
+		weatherApi("Seoul,KR");
+		let inputDataVal = ''
+		let ddArrct = ''
 		$("form").on("submit", function () {
 			// inputDataVal = $('#data1').val('서울');
-			var inputDataVal = $("#data1").val();
-			let ddArrct = dataArr.filter((value) => {
+
+			inputDataVal = $("#data1").val();
+			ddArrct = dataArr.filter((value) => {
 				return value.kor === inputDataVal;
 			});
-			// console.log(ddArrct)
-			weatherApi(ddArrct[0].eng);
+			if(inputDataVal === '') {
+				weatherApi("Seoul,KR");
+			}else{
+				
+				weatherApi(ddArrct[0].eng);
+			}
+			
 			return false;
 		});
-		weatherApi("Seoul,KR");
+		
 
-		new Swiper(".myswiper", {
-			// 큐브 효과 사용
-			effect: "cube",
-			// 슬라이드 반복
-			loop: true,
-			// 페이징 설정
-			pagination: {
-				// 페이징 요소의 클래스명
-				el: ".swiper-pagination",
-				// 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
-				clickable: true,
-			},
-			autoplay: true,
-		});
 	</script>
 	<script src="./js/index.js"></script>
 	<script type="module" src="./js/clothPath.js"></script>

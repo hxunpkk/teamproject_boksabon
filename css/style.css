@@ -15,7 +15,7 @@ body {
     height: 100vh;
     overflow: hidden;
     cursor: pointer;
-    background-image: #fff;
+    background: #fff;
 }
 .face {
     position: absolute;

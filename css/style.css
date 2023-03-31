@@ -15,6 +15,7 @@ body {
     height: 100vh;
     overflow: hidden;
     cursor: pointer;
+    background-color: #fff;
     /* background-image: radial-gradient(circle, #171424, #000); */
 }
 .face {
@@ -1307,11 +1308,11 @@ body {
     height: 100%;
 }
 .foto:nth-of-type(1) .foto__right::before {
-    background: url(./img/photo2.jpg) no-repeat center/cover;
+    background: url(../img/photo2.jpg) no-repeat center/cover;
 }
 
 .foto:nth-of-type(2) .foto__right::before {
-    background: url(./img/photo1.jpg) no-repeat center/cover;
+    background: url(../img/photo1.jpg) no-repeat center/cover;
 }
 .foto__left {
     background-color: #9e99c1;

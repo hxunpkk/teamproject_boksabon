@@ -10,7 +10,6 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
 .back_home .home_btn2 { display: none; } 
 .back_home .home_btn3 { display: none; } 
 .back_home .home_btn3.on { display: block; } 
-.search_btn { float: right; width: 20%; height: 40px; color: #fff; border: none; border-radius: 5px; background: none; cursor: pointer; } 
 /* introClone */
 .introClone { position: fixed; width: 100%; height: 100%; z-index: 999999999; } 
 /* 배경 및 searchForm */
@@ -65,8 +64,8 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
 .td { display: table-cell; vertical-align: middle; } 
 .search_btn { padding: 0; margin: 0; color: #fff; font-family: Nunito; border: none; background-color: transparent; } 
 .search_btn { display: block; position: relative; width: 60px; height: 79px; cursor: pointer; } 
-.search_btn i { display: block; position: absolute; right:0; top:10px; font-size:40px;} 
-
+.search_btn i { display: block; position: absolute; right:0; top:10px; font-size:40px; transition: all 0.1s;} 
+.search_btn i:hover { font-size:45px;}
 #cover { display: none; position: absolute; top: 60%; left:44%; transform: scale(0.6) translateX(-50%); width: 550px; padding: 35px; margin: -83px auto 0 auto; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 10px 40px #b0c4de, 0 0 0 20px #ffffffeb; } 
 #cover.on { top:10%; } 
 #s-cover { width: 1px; padding-left: 35px; } 
@@ -117,4 +116,5 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
 .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99; } 
 .modalBackForm { width:100%; height:100%; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); } 
 .modalSanse { position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%); transition: all .5s; } 
+.modalSanse iframe { border-radius: 20px;}
 .modalSanse button { position: absolute; bottom: 0; left: 50%; padding: 5px 10px; color: #fff; background: #000; transform: translateX(-50%); } 

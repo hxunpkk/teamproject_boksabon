@@ -115,6 +115,6 @@ a { color: inherit; vertical-align: baseline; text-decoration: none; }
 /* 모달창 css */
 .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99; } 
 .modalBackForm { width:100%; height:100%; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); } 
-.modalSanse { position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%); transition: all .5s; } 
+.modalSanse { position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%);  } 
 .modalSanse iframe { border-radius: 20px;}
 .modalSanse button { position: absolute; bottom: 0; left: 50%; padding: 5px 10px; color: #fff; background: #000; transform: translateX(-50%); } 

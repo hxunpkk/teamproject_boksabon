@@ -1,6 +1,6 @@
 @charset "UTF-8";
-body::-webkit-scrollbar {
-	display: none;
+body {
+  overflow: hidden;
 }
 
 #section {
@@ -46,7 +46,6 @@ body::-webkit-scrollbar {
   padding: 10px;
   border-radius: 5px;
   font-weight: bold;
-  font-size:20px;
 }
 #section #map .btnBox button.on {
   background: orange;
@@ -91,12 +90,16 @@ body::-webkit-scrollbar {
 #section #contBox .inTitle {
   font-size: 30px;
   padding-top: 50px;
+  display:none;
 }
 #section #contBox .inTitle span {
   background: orange;
   padding: 5px;
   border-radius: 5px;
   font-weight: bold;
+}
+#section #contBox .inTitle.on {
+  display:block;
 }
 #section #contBox #close {
   flex: 1 1 1;
@@ -121,17 +124,17 @@ body::-webkit-scrollbar {
   height: 80%;
   margin: auto;
   background: #fff;
-  padding: 3px;
+  overflow-y: scroll;
 }
 #section #contBox .imgBox .img {
-  flex: 1 1 35%;
+  flex: 1 1 50%;
+  height: 30%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border: 5px solid #fff;
   display: flex;
 }
 #section #contBox .imgBox .img p {
@@ -140,18 +143,18 @@ body::-webkit-scrollbar {
   height: 100%;
   transition: all 0.3s;
   display: none;
-  font-size: 15px;
-  padding-top: 5%;
+  font-size: 13px;
+  padding-top: 3%;
   transform: translate(0, 80%);
   line-height: 15px;
   margin-top: auto;
 }
 #section #contBox .imgBox .img p span {
-  font-size: 20px;
+  font-size: 18px;
 }
 #section #contBox .imgBox .img p i {
   font-size: 60px;
-  padding: 10% 0 10% 0;
+  padding: 12% 0 10% 0;
 }
 #section #contBox .imgBox .img.img:hover p {
   transform: translate(0, 0);

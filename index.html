@@ -25,7 +25,6 @@
 </head>
 
 <body>
-	<!-- <span id="clock"></span> -->
 	<div class="back_home">
 		<button class="home_btn1">
 			<img src="./img/back_icon.png" alt="">
@@ -78,8 +77,6 @@
 				<div class="dronimg">
 
 				</div>
-				<!-- 				<img src="./img/weather_banner.gif" class="weather_banner">
- -->
 			</div>
 		</div>
 
@@ -121,6 +118,7 @@
 	<script type="module">
 		import dataArr from "./js/EnglishName.js";
 		let koreaAreaName = "";
+		let weather_Main = "";
 
 		const weatherApi = (area) => {
 			$.ajax({
@@ -242,10 +240,20 @@
 					let weather_Main = resp.weather[0].main;
 					let weather_id = resp.weather[0].id;
 					let weather_icon = resp.weather[0].icon;
+						$('.codyIframe').remove();
+						$('.modalBackForm').remove();
+					if (weather_Main == 'Clear') {
+						$('.oneModal').prepend(`<iframe src="/codyPage.html" style="width:100%; height:100%" class="codyIframe"></iframe>`)
+						console.log(11)
+					} else if (weather_Main == 'Clouds' || weather_Main == 'Rain'|| weather_Main == 'Mist') {
+						$('.oneModal').prepend(`<iframe src="/codyPage2.html" style="width:100%; height:100%" class="codyIframe"></iframe>`)
+					}else{
+						$('.oneModal').prepend(`<iframe src="/codyPage.html" style="width:100%; height:100%" class="codyIframe"></iframe>`)
+					}
 				},
 			});
 		};
-
+		
 		$("body").append(`<div class="modal1 modal"></div>`);
 		$("body").append(`<div class="modal4 modal"></div>`);
 		$(".modal1").prepend(`<div class="oneModal modalSanse"></div>`);
@@ -253,11 +261,8 @@
 		$(".modal4").prepend(`<div class="fourModal modalSanse"></div>`);
 		$(".oneModal").prepend(`<a></a>`);
 		$(".fourModal").prepend(`<a></a>`);
-		$(".oneModal").prepend(
-			`<iframe src="/codyPage.html" style="width:100%; height:100%"></iframe>`
-		);
 		$(".fourModal").prepend(
-			`<iframe src="/mise.html" style="width:100%; height:100%"></iframe>`
+			`<iframe src="/mise.html" style="width:100%; height:100%" id="iframe4"></iframe>`
 		);
 
 		$(".modal1").css("opacity", "0");
@@ -267,25 +272,28 @@
 
 		// ajax에서 보낸 값(한글)을 영어로 바꿔주는 폼
 		weatherApi("Seoul,KR");
+
 		let inputDataVal = ''
 		let ddArrct = ''
 		$("form").on("submit", function () {
 			// inputDataVal = $('#data1').val('서울');
 
 			inputDataVal = $("#data1").val();
-			ddArrct = dataArr.filter((value) => {
+			/* ddArrct = dataArr.filter((value) => {
 				return value.kor === inputDataVal;
-			});
-			if(inputDataVal === '') {
+			}); */
+			if (inputDataVal === '') {
 				weatherApi("Seoul,KR");
-			}else{
-				
+			} else {
+				ddArrct = dataArr.filter((value) => {
+					return value.kor === inputDataVal;
+				});
 				weatherApi(ddArrct[0].eng);
 			}
-			
+
 			return false;
 		});
-		
+
 
 	</script>
 	<script src="./js/index.js"></script>

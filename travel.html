@@ -21,7 +21,7 @@
 
     <section id="section">
             <div id="map">
-                <h2 class="outTitle"><i class="fa-solid fa-car-side"></i> 오늘은 어디로 떠나볼까? <i class="fa-solid fa-car-side"></i></h2>
+                <h2 class="outTitle" id="outTitle"><i class="fa-solid fa-car-side"></i>오늘은 어디로 떠나볼까?<i class="fa-solid fa-car-side"></i></h2>
                 <div class="btnBox">
                     <button type="button" id="seoul">서울 근교</button>
                     <button type="button" id="busan">부산 근교</button>
@@ -33,7 +33,14 @@
             </div>
             <div id="contBox">
                 <button type="button" id="close"><i class="fa-solid fa-rectangle-xmark"></i></button>
-                <h2 class="inTitle"></h2>
+                <h2 class="inTitle seoul" id="seoul"><i class="fa-solid fa-car-side"></i> 오늘은 <span>서울 근교</span>로 떠나볼까? <i class="fa-solid fa-car-side"></i></h2>
+                <h2 class="inTitle busan" id="busan"><i class="fa-solid fa-car-side"></i> 오늘은 <span>부산 근교</span>로 떠나볼까? <i class="fa-solid fa-car-side"></i></h2>
+                <h2 class="inTitle gangwon" id="gangwon"><i class="fa-solid fa-car-side"></i> 오늘은 <span>강원도</span>로 떠나볼까? <i class="fa-solid fa-car-side"></i></h2>
+                <h2 class="inTitle daejeon" id="daejeon"><i class="fa-solid fa-car-side"></i> 오늘은 <span>대전 근교</span>로 떠나볼까? <i class="fa-solid fa-car-side"></i></h2>
+                <h2 class="inTitle gwangju" id="gwangju"><i class="fa-solid fa-car-side"></i> 오늘은 <span>광주 근교</span>로 떠나볼까? <i class="fa-solid fa-car-side"></i></h2>
+                <h2 class="inTitle jeju" id="jeju"><i class="fa-solid fa-car-side"></i> 오늘은 <span>제주도</span>로 떠나볼까? <i class="fa-solid fa-car-side"></i></h2>
+                
+
                 <div class="imgBox">
                     <div class="img img1">
                         <a href="https://map.naver.com/v5/search/%EB%82%A8%EC%82%B0%ED%83%80%EC%9B%8C?c=15,0,0,0,dh" target="_blank"><p class="spring seoul"><span>서울 남산</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>서울 용산구 남산공원길 105</p></a>
@@ -79,6 +86,122 @@
                         <a href="" target="_blank"><p class="summer gwangju"></p></a>
                         <a href="" target="_blank"><p class="summer jeju"></p></a>
                         
+                        <a href="" target="_blank"><p class="fall seoul"></p></a>
+                        <a href="" target="_blank"><p class="fall busan"></p></a>
+                        <a href="" target="_blank"><p class="fall gangwon"></p></a>
+                        <a href="" target="_blank"><p class="fall daejeon"></p></a>
+                        <a href="" target="_blank"><p class="fall gwangju"></p></a>
+                        <a href="" target="_blank"><p class="fall jeju"></p></a>
+
+                        <a href="" target="_blank"><p class="winter seoul"></p></a>
+                        <a href="" target="_blank"><p class="winter busan"></p></a>
+                        <a href="" target="_blank"><p class="winter gangwon"></p></a>
+                        <a href="" target="_blank"><p class="winter daejeon"></p></a>
+                        <a href="" target="_blank"><p class="winter gwangju"></p></a>
+                        <a href="" target="_blank"><p class="winter jeju"></p></a>
+                    </div>
+                    <div class="img img3">
+                        <a href="https://map.naver.com/v5/search/%EA%B2%BD%ED%9D%AC%EB%8C%80%ED%95%99%EA%B5%90?c=15,0,0,0,dh" target="_blank"><p class="spring seoul"><span>서울 경희대학교</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>서울 동대문구 경희대로 26</p></a>
+                        <a href="https://map.naver.com/v5/search/%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%ED%8F%AC%ED%95%AD%EC%8B%9C%20%EB%82%A8%EA%B5%AC%20%ED%96%89%EB%B3%B5%EA%B8%B875%EB%B2%88%EA%B8%B8%2011/address/14397454.644976486,4302651.620832523,%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%ED%8F%AC%ED%95%AD%EC%8B%9C%20%EB%82%A8%EA%B5%AC%20%ED%96%89%EB%B3%B5%EA%B8%B875%EB%B2%88%EA%B8%B8%2011,new?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring busan"><span>포항 영일대 호수 공원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>경상북도 포항시 남구 행복길75번길 11</p></a>
+                        <a href="https://map.naver.com/v5/search/%EB%A7%B9%EB%B0%A9/place/1798039768?c=7,0,0,0,dh&placePath=%3Fentry=bmp" target="_blank"><p class="spring gangwon"><span>삼척 맹방</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>강원 삼척시 근덕면 상맹방리 215-8</p></a>
+                        <a href="https://map.naver.com/v5/search/%EA%B3%B5%EC%A3%BC%20%ED%95%9C%EC%98%A5%EB%A7%88%EC%9D%84?c=7,0,0,0,dh" target="_blank"><p class="spring daejeon"><span>공주 한옥 마을</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>충남 공주시 관광단지길 12</p></a>
+                        <a href="https://map.naver.com/v5/search/%EA%B4%91%EC%A3%BC%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EA%B3%B5%EC%9B%90?c=7,0,0,0,dh" target="_blank"><p class="spring gwangju"><span>광주 어린이 공원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>광주 북구 오룡동</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%82%B0%EB%B0%A9%EC%82%B0%20%EC%9C%A0%EC%B1%84%EA%BD%83%EB%B0%AD/place/13491591?c=10,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring jeju"><span>제주 산방산 유채꽃밭</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>제주 서귀포시 안덕면</p></a>
+
+                        <a href="" target="_blank"><p class="summer seoul"></p></a>
+                        <a href="" target="_blank"><p class="summer busan"></p></a>
+                        <a href="" target="_blank"><p class="summer gangwon"></p></a>
+                        <a href="" target="_blank"><p class="summer daejeon"></p></a>
+                        <a href="" target="_blank"><p class="summer gwangju"></p></a>
+                        <a href="" target="_blank"><p class="summer jeju"></p></a>
+
+                        <a href="" target="_blank"><p class="fall seoul"></p></a>
+                        <a href="" target="_blank"><p class="fall busan"></p></a>
+                        <a href="" target="_blank"><p class="fall gangwon"></p></a>
+                        <a href="" target="_blank"><p class="fall daejeon"></p></a>
+                        <a href="" target="_blank"><p class="fall gwangju"></p></a>
+                        <a href="" target="_blank"><p class="fall jeju"></p></a>
+
+                        <a href="" target="_blank"><p class="winter seoul"></p></a>
+                        <a href="" target="_blank"><p class="winter busan"></p></a>
+                        <a href="" target="_blank"><p class="winter gangwon"></p></a>
+                        <a href="" target="_blank"><p class="winter daejeon"></p></a>
+                        <a href="" target="_blank"><p class="winter gwangju"></p></a>
+                        <a href="" target="_blank"><p class="winter jeju"></p></a>
+                    </div>
+                    <div class="img img4">
+                        <a href="https://map.naver.com/v5/search/%EC%9D%B8%EC%B2%9C%EB%8C%80%EA%B3%B5%EC%9B%90?c=12,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring seoul"><span>인천 대공원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>인천 남동구 장수동 산79</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%95%84%EC%96%91%20%EA%B8%B0%EC%B0%BB%EA%B8%B8?c=12,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring busan"><span>대구 지저동 벚꽃 터널</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>대구 동구 지저동</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%86%8D%EC%B4%88%20%EC%84%A4%EC%95%85%EC%82%B0?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring gangwon"><span>속초 설악산</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>강원 속초시 설악산로 1085</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%A0%84%EC%A3%BC%20%EB%8F%99%EB%AC%BC%EC%9B%90?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring daejeon"><span>전주 동물원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>전북 전주시 덕진구 소리로 68 전주동물원</p></a>
+                        <a href="https://map.naver.com/v5/search/%EB%82%A8%EC%9B%90%20%EA%B4%91%ED%95%9C%EB%A3%A8?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring gwangju"><span>남원 광한루</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>전북 남원시 요천로 1447</p></a>
+                        <a href="https://map.naver.com/v5/search/%EA%B1%B8%EB%A7%A4%20%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring jeju"><span>제주 걸매 생태 공원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>제주 서귀포시 서홍동 1207</p></a>
+
+                        <a href="" target="_blank"><p class="summer seoul"></p></a>
+                        <a href="" target="_blank"><p class="summer busan"></p></a>
+                        <a href="" target="_blank"><p class="summer gangwon"></p></a>
+                        <a href="" target="_blank"><p class="summer daejeon"></p></a>
+                        <a href="" target="_blank"><p class="summer gwangju"></p></a>
+                        <a href="" target="_blank"><p class="summer jeju"></p></a>
+
+                        <a href="" target="_blank"><p class="fall seoul"></p></a>
+                        <a href="" target="_blank"><p class="fall busan"></p></a>
+                        <a href="" target="_blank"><p class="fall gangwon"></p></a>
+                        <a href="" target="_blank"><p class="fall daejeon"></p></a>
+                        <a href="" target="_blank"><p class="fall gwangju"></p></a>
+                        <a href="" target="_blank"><p class="fall jeju"></p></a>
+
+                        <a href="" target="_blank"><p class="winter seoul"></p></a>
+                        <a href="" target="_blank"><p class="winter busan"></p></a>
+                        <a href="" target="_blank"><p class="winter gangwon"></p></a>
+                        <a href="" target="_blank"><p class="winter daejeon"></p></a>
+                        <a href="" target="_blank"><p class="winter gwangju"></p></a>
+                        <a href="" target="_blank"><p class="winter jeju"></p></a>
+                    </div>
+                    <div class="img img5">
+                        <a href="https://map.naver.com/v5/search/%EC%88%98%EB%B4%89%EA%B3%B5%EC%9B%90?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring seoul"><span>인천 수봉 공원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>인천 미추홀구 수봉안길 84</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%9D%B4%EC%9B%94%EB%93%9C?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring busan"><span>대구 이월드</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>대구 달서구 두류공원로 200 이월드</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%B6%98%EC%B2%9C%EB%8C%90?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring gangwon"><span>춘천댐</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>강원 춘천시 서면 오월리</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%99%84%EC%82%B0%EA%B3%B5%EC%9B%90?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring daejeon"><span>전주 완산 공원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>전북 전주시 완산구 공수내1길 19-4</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%9E%A5%EC%84%B1%ED%98%B8%EC%88%98?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring gwangju"><span>장성 호수변길</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>전남 장성군 장성읍 용강리</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%B9%A0%EC%8B%AD%EB%A6%AC%EA%B3%B5%EC%9B%90?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring jeju"><span>제주 칠십리 공원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>제주 서귀포시 현청로 41-19</p></a>
+
+                        <a href="" target="_blank"><p class="summer seoul"></p></a>
+                        <a href="" target="_blank"><p class="summer busan"></p></a>
+                        <a href="" target="_blank"><p class="summer gangwon"></p></a>
+                        <a href="" target="_blank"><p class="summer daejeon"></p></a>
+                        <a href="" target="_blank"><p class="summer gwangju"></p></a>
+                        <a href="" target="_blank"><p class="summer jeju"></p></a>
+
+                        <a href="" target="_blank"><p class="fall seoul"></p></a>
+                        <a href="" target="_blank"><p class="fall busan"></p></a>
+                        <a href="" target="_blank"><p class="fall gangwon"></p></a>
+                        <a href="" target="_blank"><p class="fall daejeon"></p></a>
+                        <a href="" target="_blank"><p class="fall gwangju"></p></a>
+                        <a href="" target="_blank"><p class="fall jeju"></p></a>
+
+                        <a href="" target="_blank"><p class="winter seoul"></p></a>
+                        <a href="" target="_blank"><p class="winter busan"></p></a>
+                        <a href="" target="_blank"><p class="winter gangwon"></p></a>
+                        <a href="" target="_blank"><p class="winter daejeon"></p></a>
+                        <a href="" target="_blank"><p class="winter gwangju"></p></a>
+                        <a href="" target="_blank"><p class="winter jeju"></p></a>
+                    </div>
+                    <div class="img img6">
+                        <a href="https://map.naver.com/v5/search/%EB%A7%8C%EC%84%9D%EA%B3%B5%EC%9B%90?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring seoul"><span>수원 만석 공원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>경기 수원시 장안구 송죽동 248</p></a>
+                        <a href="https://map.naver.com/v5/search/%EB%AC%B4%EA%B1%B0%EC%B2%9C?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring busan"><span>울산 무거천</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>울산 남구 무거동</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%98%81%EC%9B%94%20%EC%97%B0%EB%8B%B9%EC%9B%90?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring gangwon"><span>영월 연당원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>강원 영월군 남면 연당리 865-8</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%95%84%EC%A4%91%ED%98%B8%EC%88%98?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring daejeon"><span>전주 아중 호수</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>전북 전주시 덕진구 우아동1가</p></a>
+                        <a href="https://map.naver.com/v5/search/%EC%9E%A5%EC%84%B1%ED%98%B8?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring gwangju"><span>장성 유채꽃밭</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>전남 장성군 북하면 동현리</p></a>
+                        <a href="https://map.naver.com/v5/search/%ED%95%9C%EB%A6%BC%EA%B3%B5%EC%9B%90?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><p class="spring jeju"><span>제주 한림 공원</span><br><i class="fa-solid fa-magnifying-glass fa-beat"></i><br>제주 제주시 한림읍 한림로 300</p></a>
+
+                        <a href="" target="_blank"><p class="summer seoul"></p></a>
+                        <a href="" target="_blank"><p class="summer busan"></p></a>
+                        <a href="" target="_blank"><p class="summer gangwon"></p></a>
+                        <a href="" target="_blank"><p class="summer daejeon"></p></a>
+                        <a href="" target="_blank"><p class="summer gwangju"></p></a>
+                        <a href="" target="_blank"><p class="summer jeju"></p></a>
+
                         <a href="" target="_blank"><p class="fall seoul"></p></a>
                         <a href="" target="_blank"><p class="fall busan"></p></a>
                         <a href="" target="_blank"><p class="fall gangwon"></p></a>

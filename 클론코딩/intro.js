@@ -24,7 +24,7 @@ var S = {
       if (i !== -1) {
         S.UI.simulate(decodeURI(action).substring(i + 3));
       } else {
-        S.UI.simulate('여행!|갈래?|어디로?|');
+        S.UI.simulate('여행!|맛집!|어디로?|갈래?');
       }
   
       S.Drawing.loop(function () {

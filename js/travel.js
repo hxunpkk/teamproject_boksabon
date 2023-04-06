@@ -1,7 +1,7 @@
+
 (function($){
     $(window).on('load', season())
     function season() {
-
     
         let today = new Date()
         let month = today.getMonth()+1 
@@ -18,9 +18,9 @@
         } else if (12<=month || month<=2) {
             season = 'winter'
         }
+        /* console.log(season) */
         // console.log(local)
-
-
+        
         // 월별 계절 변경
         if (season == 'spring') {
             $('#contBox').addClass('spring')
@@ -31,7 +31,6 @@
         } else if (season == 'winter') {
             $('#contBox').addClass('winter')
         }
-        
     }
     // 버튼별 지역명을 클래스로 붙이기
     $('button#seoul').on('click', function(){
@@ -40,6 +39,7 @@
         $('#contBox .inTitle').empty().append(`<i class="fa-solid fa-car-side"></i> 오늘은 <span>서울 근교</span>로 떠나볼까? <i class="fa-solid fa-car-side"></i>`)
         $(this).addClass('on')
         $('#contBox').removeClass('close busan gangwon daejeon gwangju jeju').addClass('seoul')
+        
     })
     $('button#busan').on('click', function(){
         $('#map button').removeClass()

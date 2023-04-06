@@ -1,10 +1,11 @@
 import dataArr from "./EnglishName.js";
 
+let koreaAreaName = "";
 (function ($) {
 
     $(window).on('load', season())
     function season() {
-        let koreaAreaName = ""
+        
         let koreaAreaNameEng = "";
         let koreaAreaNameValue = [];
         const weatherApi = (area) => {
@@ -47,6 +48,7 @@ import dataArr from "./EnglishName.js";
                         runframe.addEventListener('load', function () {
                             this.contentDocument.querySelector('button').classList.remove()
                             this.contentDocument.querySelector('button#' + `${seoulVal}`).classList.add('on');
+                            this.contentDocument.querySelector('h2#seoul').classList.add('on');
                             this.contentDocument.getElementById('contBox').classList.add(`${seoulVal}`);
                         })
                     }
@@ -58,6 +60,7 @@ import dataArr from "./EnglishName.js";
                         runframe.addEventListener('load', function () {
                             this.contentDocument.querySelector('button').classList.remove()
                             this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
+                            this.contentDocument.querySelector('h2#gwangju').classList.add('on');
                             this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
                         })
                     }
@@ -71,6 +74,7 @@ import dataArr from "./EnglishName.js";
                         runframe.addEventListener('load', function () {
                             this.contentDocument.querySelector('button').classList.remove()
                             this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
+                            this.contentDocument.querySelector('h2#busan').classList.add('on');
                             this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
                         })
                     }
@@ -79,6 +83,7 @@ import dataArr from "./EnglishName.js";
                         runframe.addEventListener('load', function () {
                             this.contentDocument.querySelector('button').classList.remove()
                             this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
+                            this.contentDocument.querySelector('h2#jeju').classList.add('on');
                             this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
                         })
                     }
@@ -88,6 +93,7 @@ import dataArr from "./EnglishName.js";
                         runframe.addEventListener('load', function () {
                             this.contentDocument.querySelector('button').classList.remove()
                             this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
+                            this.contentDocument.querySelector('h2#gangwon').classList.add('on');
                             this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
                         })
                     }
@@ -99,6 +105,7 @@ import dataArr from "./EnglishName.js";
                         runframe.addEventListener('load', function () {
                             this.contentDocument.querySelector('button').classList.remove()
                             this.contentDocument.querySelector('button#' + `${areaVal}`).classList.add('on');
+                            this.contentDocument.querySelector('h2#daejeon').classList.add('on');
                             this.contentDocument.getElementById('contBox').classList.add(`${areaVal}`);
                         })
                     }
@@ -201,7 +208,7 @@ import dataArr from "./EnglishName.js";
             $('.threeModal').css('opacity', '1')
             $('.threeModal').css('z-index', '999999')
             $('.fourModal').css('opacity', '0')
-            
+
             return false
 
         })

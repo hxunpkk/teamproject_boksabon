@@ -5,7 +5,7 @@
         $('.home_btn1').fadeOut(0);
         $(".home_btn2").fadeIn(0);
         $("#cover").fadeIn(0);
-    }, 8000);
+    }, 9000);
     
     let content = "";
     content = "지역을 검색하세요.                 ";
@@ -29,7 +29,6 @@
     })
     $('.leftright').on('click', function(){
         $('.dronData').addClass('on')
-        console.log(123)
     })
 
     $('.back_form').on('click', function () {
@@ -86,6 +85,7 @@
         $('.modal3').css('z-index', '0')
         $('.modal4').css('opacity', '0')
         $('.modal4').css('z-index', '0')
+        $('.modalSanse').removeClass('ani')
         $(this).css('opacity', '0')
         $(this).css('z-index', '0')
     });

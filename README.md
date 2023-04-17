@@ -1,6 +1,7 @@
 
 
 "여행지 관련 데이터 사이트"
+![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/115339701/232431979-5ef5f117-f86c-48e3-91a8-77fc193ffab7.gif)
 
 [배포 주소] 
 - https://dynamic-taiyaki-d5c50c.netlify.app

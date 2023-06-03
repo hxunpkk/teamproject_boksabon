@@ -1,26 +1,18 @@
+# 여행지 데이터 사이트
+여행지 관련 정보 제공 데이터 사이트 (팀 프로젝트)
 
+## 배포 주소
+https://dynamic-taiyaki-d5c50c.netlify.app
 
-"여행지 관련 데이터 사이트"
-- ![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/115339701/232431979-5ef5f117-f86c-48e3-91a8-77fc193ffab7.gif)
-
-[배포 주소] 
-- https://dynamic-taiyaki-d5c50c.netlify.app
-
-[프로젝트 소개]
-- 한국 각 지역명을 검색하면 날씨, 미세먼지, 맛집 등 알수있는 사이트이다.
-
-[내가 구현한 기능]
-- 전체 페이지 디자인, 기획
-- 인트로 페이지, index 페이지 제작
-- 날씨api 데이터 추출
-- 모달과 index에서 데이터를 연동할 수 있도록 기능 구현
-
-[메인 기술]
+## 메인 기술
 - Html
 - Css 
 - JQuery 
 - Js 
 
+## 내가 구현한 기능
+- 날씨별 의상 추천 기능
+- 지역별 음식점 추천 기능
 
 
 

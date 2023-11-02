@@ -46,14 +46,22 @@
 ### **1. 반응형 웹**
 https://user-images.githubusercontent.com/67828187/279857525-f5f4ec5f-9547-4277-976e-fb09f15acbbf.mp4
 
++ 환경 별 반응형 웹 사이즈 구현
+
 ### **2. 날씨 데이터 출력**
 https://user-images.githubusercontent.com/67828187/279857536-a788bc50-48be-4213-9661-1687bae60e4f.mp4
+
++ 입력한 위치에 따른 기상 데이터 출력 (openweather API 활용)
 
 ### **3. 의상 추천**
 https://user-images.githubusercontent.com/67828187/279857540-2039de6f-5ae1-4811-ab77-8980f7680feb.mp4
 
++ 날씨 별 의상 추천 기능
+
 ### **4. 음식점 추천**
 https://user-images.githubusercontent.com/67828187/279857541-8e4f0919-2fad-40a9-a215-94c7fb40c772.mp4
+
++ 위치 별 음식점 추천 기능
 
 ### 내가 구현한 기능
 - 날씨별 의상 추천 기능
